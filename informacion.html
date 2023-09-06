@@ -1,0 +1,45 @@
+1) npm init -y --> crea un proyecto node.js
+2) npm i express --> instala express con paquete node_modules
+3) crear una carpeta src con un archivo llamado app.js o como desee
+4) crear una ruta por GET entre const.app y app.list
+5) ejecutar por terminal node src/app.js
+
+6) instalar nodemon npm i nodemon --> programita que acutaliza automaticamente.
+luego ejecutar por consola npx nodemon src/app.js --> me actualiza todo automaticamente.
+
+7)crear en "script" en package.json uno que diga "dev": "nodemon src/app.js",
+y hacer en terminal npm run dev --> consola
+
+pero como esto usa siempre en toda web "start", modificar el start colocando
+"start": "node src/app.js",
+
+8) crear un proyecto repositorio local --> 
+git init
+git config user.name ""
+git config user.email ""
+git remote add origin ... (todo el repositorio destino)
+git status
+git branch
+git add . 
+git push -u origin main (me sube todos los archivos)
+
+
+9) crear en la raiz de mi proyecto un .gitignore --> 
+ignorando mi node_modules al guardar con S, 
+de esta manera evito que todo esto se suba a github
+
+git remote add origin ... (todo el repositorio destino)
+git branch -M main
+git commit -m "first commit"
+git status
+git push -u origin main
+
+
+
+10) voy a crear otro
+app.get('/user', (req,res){
+    res.send(user);
+})
+
+queda en el video 1 hs 46 min  ---> gracias
+ver ademas que pasa con .gitignore porque no lo toma
