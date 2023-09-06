@@ -1,0 +1,336 @@
+:root {
+    --RosaNeon: #FF01ED;
+    --turquesa: #00e1ff;
+    color: white;
+    --doradito:  #d7cac0;
+
+}
+body {
+    background-image: url(/images/pexels-jovydas-pinkevicius-3358953.jpg);
+    background-size: cover;
+
+}
+#logoShake {
+    box-shadow: 1px 10px 10px 10px rgba(255, 255, 255, 0.89); /* Cambia los valores para ajustar la sombra */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    display: flex;
+    left: 30%;
+    position: absolute;
+    height: 30%;
+    filter: brightness(1); 
+
+}
+
+#search-form {
+    position: absolute;
+    top: 50px; /* Ajusta este valor para la distancia vertical desde la parte superior */
+    right: 20px; /* Ajusta este valor para la distancia horizontal desde la derecha */
+}
+#carrito{
+    position: absolute;
+    top: 100px; /* Ajusta este valor para la distancia vertical desde la parte superior */
+    right: 70px; /* Ajusta este valor para la distancia horizontal desde la derecha */
+    transition: transform 0.3s ease-in-out; /* Agregar una transición suave */
+    border-radius: 40%;
+    box-shadow: 1px 10px 10px 10px rgba(223, 151, 223, 0.89); /* Cambia los valores para ajustar la sombra */
+
+    
+}
+#carrito:hover {
+    transform: translateY(-5px); /* Mover el icono hacia arriba al hacer hover */
+    
+  }
+#textoCarrito{
+    position: absolute;
+    top: 130px;
+    right: 40px;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    color:var(--turquesa) ;
+    text-shadow: 1px 1px 2px rgba(1, 48, 70, 0.993); /* Valores de sombra */
+
+}
+#contenedorNavBar{
+    position: absolute;
+    top:35%;
+    font-style: black;
+
+    
+}
+.navBar {
+    width: 100%; /* Cambiar el ancho para que ocupe toda la pantalla */
+    background-color: #aa4e9f;
+    box-shadow: 15px 13px 37px #a11791;
+    border-radius: 24px;
+    padding: 20px 0; /* Ajustar el padding superior e inferior */
+    text-align: center; /* Centrar el contenido horizontalmente */
+    position: relative; 
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.navBar ol {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Ocupar todo el ancho disponible */
+    position: relative; /* Cambiar a relative para que los elementos internos usen este como referencia */
+    font-style: black;
+
+}
+
+.navBar li {
+    margin-right: 15px;
+    font-style: black;
+
+}
+
+.navBar a {
+    text-decoration: none;
+    color: white;
+    padding: 14px 16px;
+    display: block;
+    font-style: black;
+
+}
+
+.navBar .dropdown {
+    position: relative;
+    font-style: black;
+}
+.desplegables{
+    font-style: black;
+}
+
+.navBar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 7px 13px 37px #a11791;
+    z-index: 1;
+    font-style: black;
+    color: black;
+}
+
+.navBar .for a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    font-style: black;
+}
+
+.navBar .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    font-style: black;
+
+}
+
+.navBar .dropdown:hover .dropdown-content {
+    display: block;
+    font-style: black;
+
+}
+
+#Logo{
+    top: 10%;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+#seguro{
+    font-size: medium;
+    position: absolute;
+    top: 153px;
+    right: 15px;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    color:var(--turquesa) ;
+    text-shadow: 1px 1px 2px rgba(1, 48, 70, 0.993); /* Valores de sombra */
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 2px 
+    
+    
+}
+.navBar .dropdown-content a {
+    color: black; /* Cambia el color a negro */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+}
+
+.navBar .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: black; /* Cambia el color a negro cuando se hace hover */
+}
+
+.navBar .dropdown:hover .dropdown-content {
+    display: block;
+}
+.icono{
+    height: 15px;
+    width: 15px;
+    position: relative;
+    
+}
+
+.formularioContacto{
+    position: absolute;
+    top: 330px;
+    right: 5px;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    background-color: #663399;
+    box-shadow: 1px 20px 37px #a11791;
+    border-radius: 24px;
+    padding: 7px 8px;
+}
+.textoContacto{
+    font-family: 'Arial Narrow Bold', sans-serif;
+    color:var(--turquesa) ;
+}
+
+#textarea{
+    background-color: #d7cac0;
+    font-family: sans-serif bold;
+    background-image: url(/images/shake\ it\ up\ logo.jpg);
+    background-position:center;
+    opacity: 0.5;
+    filter: brightness(1);
+}
+#textarea:hover{
+    background-image: none;
+}
+#textarea::placeholder {
+    font-size: 16px;
+    color: var(--RosaNeon);
+}
+
+.iconoContacto{
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    left: 130px;
+    top:35px;
+    
+}
+.textoSmall{
+    font-size: small;
+    font-family: sans-serif;
+    color: #FF01ED;
+}
+#location{
+    color: azure;
+    text-shadow: #00e1ff;
+
+}
+
+#keep{
+    font-size: larger;
+    position: absolute;
+    left: 50px;
+    bottom:300px;
+    
+}
+.socialMedia{
+
+    list-style: none;
+    
+    
+}
+.socialMedia ol {
+    font-size: large;
+    justify-content:center;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline;
+    width: 100%;
+    
+
+
+}
+.socialMedia li {
+    margin-right: 15px; /* Espaciado entre elementos */
+    font-size: large;
+}
+
+.socialMedia li a {
+    text-decoration: none;
+    font-size: larger;
+    background-color: rgba(255, 255, 255, 0.5); /* Color de fondo transparente */
+
+    
+}
+
+.contenedorRedes{
+    position:absolute;
+    top: 70%;
+    border: #FF01ED;
+    border: 2px solid #000; /* Cambia el color y el grosor del borde según tus preferencias */
+    padding: 10px; /* Añade espacio alrededor del contenido para que el borde sea visible */
+    width: fit-content; /* Ajusta el ancho del contenedor según su contenido */
+    margin: 0 auto; /* Centra horizontalmente el contenedor */
+    background-color: rgba(255, 255, 255, 0.5); /* Color de fondo transparente */
+    color:black;
+    background: linear-gradient(to right,  rgba(218, 195, 161, 0.7), rgba(202, 136, 223, 0.7));
+
+}
+
+#textoCarrito{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 2px;
+}
+li:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 2px;
+}
+
+#Contactanos{
+    background-color: rgba(199, 69, 238, 0.637);
+    border-radius: 50%;
+    text-align: center;
+}
+#carrito:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 2px;
+
+}
+
+
+@media (max-width: 480px){
+#seguro{
+    display: none;
+}
+
+}
+#carrito{
+    position: absolute;
+    top: 80px; /* Ajusta este valor para la distancia vertical desde la parte superior */
+    right: 60px; /* Ajusta este valor para la distancia horizontal desde la derecha */
+    transition: transform 0.3s ease-in-out; /* Agregar una transición suave */
+    border-radius: 40%;
+    box-shadow: 1px 10px 10px 10px rgba(223, 151, 223, 0.89); /* Cambia los valores para ajustar la sombra */
+}
+#textoCarrito{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 2px;
+    right: 5px;
+}
+
+
+
+@media (min-width: 481px) and (max-width: 767px){
+    #seguro{
+        display: none;
+    }
+}
