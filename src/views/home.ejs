@@ -3,27 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/carrito.css">
+    <!-- <link rel="stylesheet" href="css/carrito.css"> -->
     <link rel="stylesheet" href="css/estilohome2.css">
     <title>Home</title>
 </head>
 <header>
-    <div class="logoCarrito">
-        <a href="/listado">
-            <img src="/images/carrito.svg" alt="">
-        </a>
-    </div>
-
-    <div class="Carro">
-        <!-- <img id="carrito"src="\images\cart-plus-solid.svg" alt="" style="height: 20px; width: 20px;"> -->
-        <div id="textoCarrito">  Shake it Shop! </div>
-        <div id="seguro">Comprá seguro, comprá con nosotros.</div>
-
-    </div>
+        <div class="LoginUser">     
+            <form action="/login" method="POST">
+                <label for="username">Ingresá tu Usuario o Email:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="button" onclick="window.location.href = './';">Iniciar Sesión</button>
+            </form>
+        </div>
+        <div id="contenedorLogoShake">
+                    <img id="logoShake" src="/images/ShakeBatido.jpeg" alt="">
+        </div>
+        <div class="logoCarrito">
+            <a href="/listado">
+                <img src="/images/carrito.svg" alt="">
+            </a>
+            <div class="Carro">
+                <div id="textoCarrito">  Shake it Shop! </div>
+            </div>
+        </div>
 </header>
 <body>
-    <div id="contenedorLogoShake"><img id="logoShake" src="/images/ShakeBatido.jpeg" alt=""></div>
-<div id="contenedorNavBar">
     <nav class="navBar">
         <ol>
             <li><a href="">Inicio</a></li>
@@ -41,47 +47,37 @@
                     <a  href="/index">Barra Classic</a>
                     <a href="/index">Barra Plata</a>
                     <a href="/index">Barra Gold</a>
-                </div>
             </li>
             <li><a href="/contactos">Trabajá con nosotros</a></li>
         </ol>
-    </nav>
-    </div id="contenedorFormContacto">
-
-                <article class="formularioContacto"> 
-                    <div id="Contactanos" style="font-size: small;">
-                            Contactate con nosotros
-                    </div>
-                    <div>
-                        <div class="textoContacto">
-                            <p >Via Whatsapp...</p> 
-                            <a href="https://wa.me/5491123456789">
-                                <p class="textoSmall"> +5491123456789 </p>
-                                <img class="iconoContacto" src="/images/square-whatsapp.svg" alt="">
-                            </a>
-                            <textarea  id="textarea" name="" id="" cols="30" placeholder="Contanos que tenes planeado y te asesoramos!" rows="10" style="font-family: 'Times New Roman', Times, serif;"></textarea>
-                        </div>
-                        <div>
-                            <input class="checkButtom" type="submit" value="Enviar">
-                        </div>
-                        <div> </div>
-                        <div> </div>
-                        </div>
-                    </div>
-                </article>
-    </div>
-
-    <div class="contenedorRedes">
-            <h4 >Seguinos y conoce más sobre nosotros!</h4>
-        <ol class="socialMedia">
-            <li><a href="https://www.instagram.com/"><img class="icono" src="/images/instagram.svg" alt=""> Instagram</a></li>
-            <li><a href="https://www.facebook.com/"><img class="icono" src="/images/facebook.svg" alt=""> Facebook</a></li>
-            <li><a href="https://twitter.com/"><img class="icono" src="/images/twitter.svg" alt=""> Twitter</a></li>
-            <li><a href="correo@ejemplo.com"><img class="icono" src="/images/SobreCarta.svg" alt=""> Email</a></li>
-        </ol>
-    </div>
-    </body>
-<footer>
+    </nav>  
+</body>
+    <footer>
+        <div class="footer-flex-container">
+            <div class="formularioContacto">
+                <div id="Contactanos">Contactate con nosotros</div>
+                <div class="textoContacto">
+                    <p>Via Whatsapp...</p> 
+                    <a href="https://wa.me/5491123456789">
+                        <p class="textoSmall">+5491123456789</p>
+                        <img class="iconoContacto" src="/images/square-whatsapp.svg" alt="">
+                    </a>
+                    <textarea id="textarea" name="" placeholder="Consultas!"></textarea>
+                </div>
+                <div>
+                    <input class="checkButtom" type="submit" value="Enviar">
+                </div>
+            </div>
+            <div class="contenedorRedes">
+                <h4>Seguinos en nuestras redes!</h4>
+                <ol class="socialMedia">
+                    <li><a href="https://www.instagram.com/"><img class="icono" src="/images/instagram.svg" alt=""> Instagram</a></li>
+                    <li><a href="https://www.facebook.com/"><img class="icono" src="/images/facebook.svg" alt=""> Facebook</a></li>
+                    <li><a href="https://twitter.com/"><img class="icono" src="/images/twitter.svg" alt=""> Twitter</a></li>
+                    <li><a href="correo@ejemplo.com"><img class="icono" src="/images/SobreCarta.svg" alt=""> Email</a></li>
+                </ol>
+            </div>
+        </div>
+    </footer>
     
-</footer>
 </html>
