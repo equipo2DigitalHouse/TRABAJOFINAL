@@ -26,6 +26,9 @@ app.use("/contactos", contactosRouter)
 
 const indexRouter = require("./src/routes/indexRoutes")
 app.use("/index", indexRouter)
-//hola
+
+const adminFormRouter = require("./src/routes/adminFormRoutes")
+app.use("/adminForm", adminFormRouter)
+
 app.listen(PORT , () =>
 console.log(`Servidor escuchando en puerto ${PORT}`));
