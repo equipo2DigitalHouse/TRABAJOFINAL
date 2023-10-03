@@ -2,33 +2,41 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const PORT= process.env.PORT || 3002
+
 app.use(express.static("public"))
+app.use(express.urlencoded({extended:false}))
+app.use(express.json());
 
 app.set("view engine", "ejs")
 
 const homeRouter = require("./src/routes/homeRoutes")
 app.use("/", homeRouter)
 
-const loginRouter = require("./src/routes/loginRoutes")
-app.use("/login", loginRouter)
 
-const forgotpswdRouter = require("./src/routes/forgotpswdRoutes")
-app.use("/forgotpswd", forgotpswdRouter)
-
-const registerRouter = require("./src/routes/registerRoutes")
-app.use("/register", registerRouter)
-
-const listadoRouter = require("./src/routes/listadoRoutes")
-app.use("/listado", listadoRouter)
-
-const contactosRouter = require("./src/routes/contactosRoutes")
-app.use("/contactos", contactosRouter)
-
-const indexRouter = require("./src/routes/indexRoutes")
-app.use("/index", indexRouter)
-
-const adminFormRouter = require("./src/routes/adminFormRoutes")
-app.use("/adminForm", adminFormRouter)
+const adminFormRoutes = require("./src/routes/adminFormRoutes");
+const forgotpswdRoutes = require("./src/routes/forgotpswdRoutes");
+// const homeRoutes = require("./src/routes/homeRoutes");
+const indexRoutes = require("./src/routes/indexRoutes");
+const listadoRoutes = require("./src/routes/listadoRoutes");
+const loginRoutes = require("./src/routes/loginRoutes");
+const productsRoutes = require("./src/routes/productsRoutes");
+const registerRoutes = require("./src/routes/registerRoutes");
+const contactosRoutes = require("./src/routes/contactosRoutes");
 
 app.listen(PORT , () =>
 console.log(`Servidor escuchando en puerto ${PORT}`));
+
+app.use(adminFormRoutes);
+app.use(contactosRoutes);
+app.use(forgotpswdRoutes);
+// app.use(homeRoutes);
+app.use(indexRoutes);
+app.use(listadoRoutes);
+app.use(loginRoutes);
+app.use(productsRoutes);
+app.use(registerRoutes);
+
+// app.use((req,res,next)=> {
+//     res.send("Page not Found")
+//     next();
+// })
