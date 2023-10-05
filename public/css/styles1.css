@@ -1,0 +1,59 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border: 2px solid #000;
+  box-sizing: border-box;
+}
+
+div.block-div {
+  display: block;
+  height: 458px;
+  /* Otros estilos opcionales */
+  background-color: #e0e0e0; /* Cambia el color de fondo si lo deseas */
+  border: 1px solid #000; /* Añade un borde si lo deseas */
+}
+
+.columna-1 {
+  box-sizing: border-box;
+  display: block;
+  height: 458px;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 0px;
+  position: relative;
+  width: 257px;
+}
+
+/* Columna 2 */
+.columna-2 {
+  box-sizing: border-box;
+  display: block;
+  height: 458px;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 0px;
+  position: relative;
+  width: 257px;
+}
+
+/* Columna 3 */
+.columna-3 {
+  box-sizing: border-box;
+  display: block;
+  height: 458px;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 0px;
+  position: relative;
+  width: 257px;
+}

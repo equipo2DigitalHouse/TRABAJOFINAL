@@ -1,0 +1,123 @@
+[
+    {
+      "id": 1,
+      "title": "nuevo modelo a trabajar",
+      "price": 99.9,
+      "description": "trayendo nuevo proyecto de productos",
+      "category": "products",
+      "image": "https://nuevoproductoenweb.com/img/51UDE_UMS.jpg",
+      "rating": {
+        "rate": 1.9,
+        "count": 100
+      }
+    },
+    {
+      "id": 2,
+      "title": "Producto 2",
+      "price": 49.99,
+      "description": "Descripción del producto 2",
+      "category": "products",
+      "image": "https://example.com/producto2.jpg",
+      "rating": {
+        "rate": 4.5,
+        "count": 75
+      }
+    },
+    {
+      "id": 3,
+      "title": "Producto 3",
+      "price": 79.99,
+      "description": "Descripción del producto 3",
+      "category": "products",
+      "image": "https://example.com/producto3.jpg",
+      "rating": {
+        "rate": 3.8,
+        "count": 60
+      }
+    },
+    {
+      "id": 4,
+      "title": "Producto 4",
+      "price": 29.99,
+      "description": "Descripción del producto 4",
+      "category": "products",
+      "image": "https://example.com/producto4.jpg",
+      "rating": {
+        "rate": 4.2,
+        "count": 90
+      }
+    },
+    {
+      "id": 5,
+      "title": "Producto 5",
+      "price": 119.99,
+      "description": "Descripción del producto 5",
+      "category": "products",
+      "image": "https://example.com/producto5.jpg",
+      "rating": {
+        "rate": 4.9,
+        "count": 120
+      }
+    },
+    {
+      "id": 6,
+      "title": "Producto 6",
+      "price": 69.99,
+      "description": "Descripción del producto 6",
+      "category": "products",
+      "image": "https://example.com/producto6.jpg",
+      "rating": {
+        "rate": 3.5,
+        "count": 45
+      }
+    },
+    {
+      "id": 7,
+      "title": "Producto 7",
+      "price": 89.99,
+      "description": "Descripción del producto 7",
+      "category": "products",
+      "image": "https://example.com/producto7.jpg",
+      "rating": {
+        "rate": 4.7,
+        "count": 110
+      }
+    },
+    {
+      "id": 8,
+      "title": "Producto 8",
+      "price": 39.99,
+      "description": "Descripción del producto 8",
+      "category": "products",
+      "image": "https://example.com/producto8.jpg",
+      "rating": {
+        "rate": 3.2,
+        "count": 30
+      }
+    },
+    {
+      "id": 9,
+      "title": "Producto 9",
+      "price": 149.99,
+      "description": "Descripción del producto 9",
+      "category": "products",
+      "image": "https://example.com/producto9.jpg",
+      "rating": {
+        "rate": 4.6,
+        "count": 70
+      }
+    },
+    {
+      "id": 10,
+      "title": "Producto 10",
+      "price": 59.99,
+      "description": "Descripción del producto 10",
+      "category": "products",
+      "image": "https://example.com/producto10.jpg",
+      "rating": {
+        "rate": 4.0,
+        "count": 55
+      }
+    }
+  ]
+  

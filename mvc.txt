@@ -1,0 +1,339 @@
+MVC 
+1)  crear y ordenar carpetas
+generar 2 carpetas --> public y src 
+    src será back end y public será front end
+dentro de pubic --> css + html (static) + img + js (todo para el front end)
+dentro de src --> modelo + vista + controlador
+                         --> database + views + controllers  -->   (y otras ) routes + app.js (o server servidor o aplicacion)
+en database  pondre json --> products + users
+products --> que se verá como el siguiente ejemplo :
+{
+"id": 1,
+"title": "nuevo modelo a trabajar",
+"price": 99,9,
+"description": "trayendo nuevo proyecto de productos",
+"category": "products",
+"image": "https://nuevoproductoenweb.com/img/51UDE_UMS.jpg",
+"rating": {
+"rate": 1.9,
+"count": 100
+}
+
+controllers que seran 2 --> users + products
+users --> index.js
+products --> index.js
+
+routes pondre 2  --> userRoutes.js + productsRoutes.js
+
+POR FUERA DE SRC --> a la misma altura creare un --> INDEX.JS
+
+(TODO ESTO SERA LA CARPETA PRINCIPAL MVC)
+
+2)    instalaciones a mi package.json
+npm i  express nodemon morgan
+
+3) levantar un servidor de express --> app.js (hare lo siguiente) :
+const express = require('express'); 
+const morgan = require('morgan'); 
+const server = express();
+
+modules.exports = server;   //y lo estare recibiendo en INDEX.JS
+
+app.use(morgan('dev')); //para levantar morgan
+
+4) recibire mi servidor en INDEX.JS colocando:
+const server = requiere("./src/app"); //colocar comillas simples
+
+//env.PORT significa que es el cuerpo de variable de entorno para que levante en RENDER.
+const PORT = process.env.PORT || 3002;  //corregir los signos igual por el palito.
+server.listen(PORT, () => {
+console.log(`Servidor escuchando en puerto ${PORT}`);
+})
+
+
+
+*SI Yo ahora pongo que levante el servidor --> node index.js --> lo levanta    --> 34 min
+
+5) como avance bastante --> armo repositorio --> creo primero --> .gitignore --> node_modules 
+
+git init    --> abro mi github y creo mi nuevo repo.
+git remote ....
+git branch -M main
+git add .
+git commit -m "creando repo"
+git push -u origin main    --> levantando a mi repositorio.            --> 38.24 min
+
+6) Voy a ir a Package JSON  “start”: “node index.js”, 
+                       
+                       “dev”: “nodemon index.js”,            npm run dev
+
+7) ejecutar morgan para que vaya a todas las rutas en app.js  entre const server y modules.express:
+    server.use(morgan(‘dev’));         esto es para que me ejecutara información a cada ruta que se le pegara.                 Esto quiere decir que si en localhost:3001/  me da CANON GET, quiere decir que le hice un GET a barra y me devolvió un 404.
+Entonces si pongo   server.get(‘/’, (req,res) => res.send(‘Hola mundo’));
+Entonces como le hice referencia a barra me devuelve un 200. Porque ahora existe ese GET.
+
+*Este proyecto va a trabajar por un lado USUARIOS y por otro PRODUCTOS.
+
+*Para trabajar con USARIOS, y no MODULARIZARA nada, podría entonces hacer en app.js un :
+server.get(‘/users’, (req,res) y mandaba un file que lo tenia en la carpeta HTML)); PERO …
+para eso existe un MODELO – VISTA – CONTROLADOR   me dice que las rutas las voy a hacer en routes   userRoutes.js
+
+*En userRoutes.js  va a estar entonces toda la información de user para cuando el cliente lo solicita en el front end  el MVC lo busque y se lo devuelva al  Front end
+*Con userProducts.js  se cumple la misma regla de rutas.
+
+
+Como se hace un enrutador?  En  userRoutes.js
+1)	Voy a traer a express.  
+Const express = require(‘express’);    Lo traigo porque lo que voy a usar ahora es el enrutador de express es 
+const router = express.Routes();     acabo de hacer un enrutador.
+module.exports = router;          luego voy a exportar este router.
+
+Y donde lo recibo??    porque podría hacer lo siguiente, llamado LOGICA DE RUTAS, pero la Lógica de la ruta no esta en el enRutador, esta en el CONTROLADOR:
+
+Router.get(‘/users’, (req,res) => {            
+Res.send(‘Hola desde usuarios’);
+})                                    desde (req,res) a }) lo saco y lo envio a                                controlador como lógica de ruta, que va a ir a parar al controlador.
+
+Ahora voy a implementar esto en app.js  lo voy a recibir con un requiere. 
+
+De un lado hago un module.exports y del otro lado lo recibo con requiere.
+Const userRoutes = require(‘./routes/userRoutes’);
+
+Ahora como lo aplico  voy en app.js debajo de los server y le digo:
+Server.use(userRoutes);    entonces voy a mi localhost:3001/users
+
+	Me va a mostrar  Hola desde usuarios.                  50.38 min
+
+       
+      M = esta en base de datos o database
+      V = en carpeta views
+C =    controlador  users y voy a crear un archivo que se va a llamar  getAllUsers.js  y otra index.js
+
+En getAllUsers:
+
+Cont getAllUsers = (req,res) => {
+Res.send(‘Hola desde usuarios’);
+})
+
+module.exports = getAllUsers;     donde voy a exportar esto 
+
+En index.js  me traigo simplemente este getAllUsers 
+Const getAllUsers = requiere(‘./getAllUsers’);    
+ y como siempre acompanado de
+Un module.exports, pero en este caso de un objeto porque acá voy a exportar mas cosas, pero que por ahora va a exportar getAllUsers.
+
+module.exports = { 
+getAllUsers
+});
+Ahora, en userRoutes como lo recibo???
+Entre const routes y router.get colocar por destrcturing se que ese getAllUsers de donde viene
+
+Cont  { getAllUsers } = requiere(‘../controllers/users’);    nada mas porque ya tiene el index.js ,  porque express busca dentro de cada carpeta un archivo index.
+
+Entonces ahora si, lo que saque antes de router.get, quedara de la siguiente manera:
+
+routes.get(‘/users’, getAllUsers)                     1.01 hs
+
+
+que deberia hacer ahora con getAllUsers ¿?   que debería mandar a la aplicación?
+
+Un send.file de ese /users  pero en realidad estaría enviando un JSON.
+Pero lo que debo hacer es sacar todo ese JSON de user y traerlo a getAllUsers de la siguiente manera 
+
+Const users = requiere(‘../../database/users.json’);    entonces modifico abajo 
+
+const getAllUsers = (req,res) => {
+ res.send(users);
+}
+
+	Cuando haga un localhost:3001/users   me envia todo el json.
+
+
+       AHORA VOY A APLICAR LOGICA DEL ENVIO, porque no quiero que me envie JSON, sino los                        
+       Datos del ID …
+
+        
+       getAllUsers    dentro voy a armar una constante que la voy a llamar   entre const user y   const getAllUsers voy a poner 
+
+const infoUsers = users.map((user) =>{
+return{
+id: user.id,
+firstName: user.name.firstname,
+lastName: user.name.lastname,
+email: user.email;
+phone: user.phone
+})
+
+Ahora en vez de enviarle users, le voy a mandar  infoUsers en:
+
+const getAllUsers = (req,res) => {
+res.send(infoUsers);
+}
+
+Y cuando recarge localhost:3001/users     me envia infoUsers que requeri.
+
+ENTONCES EL map, intera el Array, y por cada iteración hace algo en el elemento, es decir yo le digo que necesito de ese array.
+
+Ahora que pasa si quiero traer un usuario especifico?   existe algo que se llaman RUTAS PARAMETRIZADAS.
+
+En donde la hago?   en userRoutes.js
+
+Debajo de router.get(‘/users’, getAllUsers);     coloco lo siguiente
+Routes.get(‘/users/:id’, getUserById);      le digo cuando entres a /users, ejecutame un método que se llame getUserById    que quiere decir, que me traiga el ID que requiero. Que va a venir de los controladores/users.
+
+Entonces corrijo la constante de arriba:
+
+const { getAllUsers, getUserById } = requiere(‘../controllers/users’);
+
+Si yo a esto lo levanto, va a romper porque no tengo getUserById, entonces debo ir a  users y crear un archivo que se llame  getUsersById.js
+
+getUsersById.js  
+const getUserById = (req, res) => {
+
+}
+
+module.exports = getUserById;           donde voy a recibir esto, en index.js
+
+index.js 
+const getUserById = requiere(‘./getUserById’);     donde exporto? Debajo en module.exports
+
+module.exports = {
+getAllUsers,
+getUserById
+}
+
+Y cuando guarde     vuelve a funcionar todo. Pero obviamente no hace nada porque, porque la lógica de la ruta no esta implementada, no hay nada. Así le ponga /users2  debo ir a getUserById.js
+
+getUserById.js  corregir y colocar 
+
+const getUserById = (req,res) => {
+res.send(‘hola soy getUserById’)         pero no sirve porque la idea es que busque ID.
+}
+
+
+
+Lo que debo hacer es    con params me devuelve user/2 me envia el ID2
+
+Const getUserById = (req,res) => {
+Res.send(req.params)
+}
+
+Ese nombre id es el que le puse en userRoutes.js en:
+Routes.get(‘/users/:id’) , donde le puedo poner idUser etc…  va el parámetro que le paso por la ruta.
+
+Debo colocar entonces 
+
+Const users = require(‘../../database/users.json’);
+
+Const getUserById = (req,res) => {
+Const { id } = req.params;
+
+Const user = users.find((user) => user.id == id);
+If(!user) return res.send(‘User not found’);        ahora si existe mandame el usuario
+Res.send(user)
+}
+
+Entonces si voy a localhost:3001/user/3  me toma el objeto 3.           min 1.40
+
+Ahora lo que hace el FIND es entrar al ARRAY  por cada elemento que tiene el array le aplico una condición o condición que le pongo.
+
+Const getUserById = (req,res) => {             cambiar por user       min 1.45
+Res.send(user)
+}
+
+Si encontró el usuario, yo quiero que ahora me arme la info como getAllUsers, entonces voy a:
+
+En getUserById.js
+
+Debajo de if:                  esto mismo se podría replicar para todos.
+
+Const infoUser = {
+Id: user.id,
+firstName: user.name.firstName,
+lastName: user.name.lastname,
+email: user.email,
+pone: user.phone
+}
+
+Res.send(infoUser)
+}
+
+git status                  recomienda trabajar de esta manera para tener todo ordenado.
+Git add .
+Git commit -m “agrego logica de usuarios”
+Git push
+
+Descargue una carpeta y quiero comenzar a trabajar en rama
+Git pull
+Git branch feat/getAllProducts               feat porque es una tarea nueva y acabo de crear una rama en mi repo local que se llama asi.
+Git checkout feat/getAllProducts             con tab deberia escribir la rama y cambiarla.
+Git push – set -upstream origin feat/getAllProducts      deberia subir ahora si la rama.
+
+La misma historia que hice con getAllUsers pero copiando de:
+
+userRoutes.js      copio y llevo para modificar en productsRoutes.js
+
+const express = requiere(‘express’);
+const router = express.Routes();
+const { getAllUser, getUserById } = require(‘../controllers/users’);
+
+router.get(‘/users’, getAllusers);
+router.get(‘/users’, getUserById);
+
+module.exports = router;
+
+Ahora modifico con algunos cambios:
+
+const express = requiere(‘express’);
+const router = express.Routes();
+const { getAllProducts } = require(‘../controllers/products’);
+
+router.get(‘/products’, getAllProducts);
+
+module.exports = router;
+
+y ahora modificar en app.js :
+
+const productRoutes = requiere(‘./routes/productsRoutes’);
+
+y tambien poner :
+server.use(productRoutes);
+
+colocar ahora en terminal  npm run dev   rompe porque falta crear
+
+products  carpeta que se llame getAllProducts.js
+
+
+
+
+getAllProducts.js :
+const getAllProducts = (req,res) => {
+}
+
+module.exports = getAllProducts;
+
+voy a products  index.js
+
+const getAllProducts = require(‘./getAllProducts’);
+
+module.exports = {
+getAllProducts
+}
+
+Ahora vuelvo a get AllProducts :
+
+Const products = requiere(‘../../database/products.json’);
+
+const getAllProducts = (req,res) => {
+res.send(products);
+}
+
+module.exports = getAllProducts;            2 hs
+
+git add .
+git commit -m “add getAllProducts”
+git push
+ir a git y emparejar las ramas y luego delete, entonces,
+git checkout main             pero main esta desactualizada una versión correspecto a la nube, ir 
+git pull
+git Branch -D feat/getAllProducts             elimine la rama de mi repo local.
