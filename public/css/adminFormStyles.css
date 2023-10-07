@@ -86,12 +86,8 @@ font-size: 14px;
 }
 
 
- @media (max-width: 480px) {
+@media (max-width: 480px) {
    .formLogin{
       width: 320px;
-      height: 268px;
-   }
-   .forgotPswd p{
-      border: none;
    }
  }
