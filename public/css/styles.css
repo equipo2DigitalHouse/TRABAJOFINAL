@@ -79,13 +79,8 @@ font-size: 14px;
  .notAlreadyUser a:hover{
    text-decoration: underline;
  }
-
  @media (max-width: 480px) {
    .formLogin{
       width: 320px;
-      height: 268px;
-   }
-   .forgotPswd p{
-      border: none;
    }
  }
