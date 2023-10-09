@@ -16,7 +16,7 @@ background-image: url(/images/wepik-export-202308260528110Mst.png);
     padding-left: 10px;
     background-color: #d7cac0;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: bold; 
  }
  .form{
     width: 400px;
@@ -42,7 +42,9 @@ background-image: url(/images/wepik-export-202308260528110Mst.png);
  .h3{
     text-align: center;
  }
- 
+.testeo{
+   text-align: center;
+}
  p{
-    padding-top: 15px;
+    padding-top: 10px;
  }
