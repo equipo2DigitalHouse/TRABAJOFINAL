@@ -3,11 +3,13 @@ const path = require("path");
 const app = express();
 const PORT= process.env.PORT || 3002
 const methodoverride = require("method-override");
+const morgan = require("morgan")
 
 app.use(express.static("public"))
 app.use(express.urlencoded({extended:false}))
 app.use(express.json());
 
+app.use(morgan('dev'));
 app.set("view engine", "ejs")
 
 app.use(methodoverride("_method"));
@@ -18,7 +20,6 @@ app.use("/", homeRouter)
 
 const adminFormRoutes = require("./src/routes/adminFormRoutes");
 const forgotpswdRoutes = require("./src/routes/forgotpswdRoutes");
-// const homeRoutes = require("./src/routes/homeRoutes");
 const indexRoutes = require("./src/routes/indexRoutes");
 const listadoRoutes = require("./src/routes/listadoRoutes");
 const loginRoutes = require("./src/routes/loginRoutes");
@@ -32,14 +33,9 @@ console.log(`Servidor escuchando en puerto ${PORT}`));
 app.use(adminFormRoutes);
 app.use(contactosRoutes);
 app.use(forgotpswdRoutes);
-// app.use(homeRoutes);
 app.use(indexRoutes);
 app.use(listadoRoutes);
 app.use(loginRoutes);
 app.use(productsRoutes);
 app.use(registerRoutes);
 
-// app.use((req,res,next)=> {
-//     res.send("Page not Found")
-//     next();
-// })
