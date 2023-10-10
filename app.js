@@ -21,20 +21,20 @@ app.use("/", homeRouter)
 const adminFormRoutes = require("./src/routes/adminFormRoutes");
 const forgotpswdRoutes = require("./src/routes/forgotpswdRoutes");
 const indexRoutes = require("./src/routes/indexRoutes");
-const listadoRoutes = require("./src/routes/listadoRoutes");
+const listRoutes = require("./src/routes/listRoutes");
 const loginRoutes = require("./src/routes/loginRoutes");
 const productsRoutes = require("./src/routes/productsRoutes");
 const registerRoutes = require("./src/routes/registerRoutes");
-const contactosRoutes = require("./src/routes/contactosRoutes");
+const contactsRoutes = require("./src/routes/contactsRoutes");
 
 app.listen(PORT , () =>
 console.log(`Servidor escuchando en puerto ${PORT}`));
 
 app.use(adminFormRoutes);
-app.use(contactosRoutes);
+app.use(contactsRoutes);
 app.use(forgotpswdRoutes);
 app.use(indexRoutes);
-app.use(listadoRoutes);
+app.use(listRoutes);
 app.use(loginRoutes);
 app.use(productsRoutes);
 app.use(registerRoutes);
