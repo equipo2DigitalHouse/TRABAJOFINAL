@@ -15,14 +15,14 @@
             <%if(allProducts[i].image.includes('http')){%>
                <div class="testeo"> <img src="<%= allProducts[i].image %>" alt="img" width="150px" height="150px" class="loginBar"></div>
             <%}else{%>
-                <div class="testeo"><img src="/images/barimages/<%= allProducts[i].image %>" alt="img" width="150px" height="150px"></div>
+                <div class="testeo"><img src="/images/barimages/<%= allProducts[i].image %>" alt="img" width="300px" height="175px"></div>
             <%}%>
             <p>Precio: <%= allProducts[i].price %></p>
             <p>Descripcion: <%= allProducts[i].description %></p>
             <p>Fecha hasta que estará disponible: <%= allProducts[i].date %> </p>
             
             <form action="/product/delete/<%= allProducts[i].id %>?_method=DELETE" method="POST">
-                <button type="submit">Delete</button>
+                <button type="submit" style="margin-top: 10px;">Delete</button>
             </form>
         </div>
     <%}%>
