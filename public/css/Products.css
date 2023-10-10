@@ -20,7 +20,7 @@ background-image: url(/images/wepik-export-202308260528110Mst.png);
  }
  .form{
     width: 400px;
-    height: 340px;
+    height: auto;
     background-color: #663399;
     margin: auto;
     margin-top: 80px;
