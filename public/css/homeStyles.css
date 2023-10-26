@@ -13,8 +13,8 @@
 body {
     background-image: url(/images/pexels-jovydas-pinkevicius-3358953.jpg);
     background-size: cover;
-
 }
+
 header{
     margin: 2em 2em 3em 0em;
     display: flex; 
