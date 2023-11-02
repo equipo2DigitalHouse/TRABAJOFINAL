@@ -11,7 +11,7 @@
         
     </header>
     <main>
-        <form method="post">
+        <form method="post" action="" enctype="multipart/form-data">
 
             <div class="formLogin">
                 <h2>
@@ -45,6 +45,18 @@
                 </div>
             </div>
             <div>
+                <p class="fontText">
+                    <label class="fontText" ><b>País de nacimiento: </b></label>
+                    <select name="nationality">
+                        <option value="argentina">Argentina</option>
+                        <option value="brasil">Brasil</option>
+                        <option value="chile">Chile</option>
+                        <option value="colombia">Colombia</option>
+                        <option value="ecuador">Ecuador</option>
+                        <option value="peru">Perú</option>
+                        <option value="uruguay">Uruguay</option>
+                        <option value="venezuela">Venezuela</option>
+                    </select>
                 <div>
                     <p class="fontText">
                         Nombre de usuario
@@ -67,6 +79,10 @@
                         </p>
                     </div>
                     <input class="loginBar" type="password" name="rptPassword" id="" placeholder="Repetir Contraseña" required>
+                </div>
+                <div>
+                    <label  class="fontText" for="avatar">Sube tu imagen de perfil:</label>
+                    <input class="fontText" type="file" id="avatar" name="avatar" accept="image/*">
                 </div>
                 <div>
                     <input class="checkButtom" type="submit" value="Ingresar">
