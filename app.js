@@ -6,7 +6,7 @@ const methodoverride = require("method-override");
 const morgan = require("morgan")
 
 app.use(express.static("public"))
-app.use(express.urlencoded({extended:false}))
+app.use(express.urlencoded({extended:false})) //nos permite capturar la informacion que viene por req.body en controllerRegister
 app.use(express.json());
 
 app.use(morgan('dev'));
