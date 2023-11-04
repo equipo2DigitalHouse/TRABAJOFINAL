@@ -7,18 +7,21 @@ body{
 
 background-image: url(/images/jpg/wepik-export-202308260528110Mst.png);
 }
-
+.error-message{
+   font-size: x-small;
+   color: red
+   
+}
 .formLogin{
-    /* width: 420px;
-    height: 440px; */
-    width: 340px;
+   
     background-color: #663399;
     margin: auto;
     margin-top: 100px;
     margin-bottom: 50px;
     box-shadow: 7px 13px 37px #a11791;
     border-radius: 24px;
-    padding: 20px 30px;
+    padding: 10px 10px;
+    overflow: auto
 }
  .formLogin h2{
     margin: 0;
@@ -38,6 +41,7 @@ background-image: url(/images/jpg/wepik-export-202308260528110Mst.png);
     background-color: #d7cac0;
     font-size: 14px;
     font-weight: bold;
+    ;
  }
 
  .checkButtom{
@@ -78,9 +82,10 @@ background-image: url(/images/jpg/wepik-export-202308260528110Mst.png);
 
  }
  .fontText{
+
    padding: 10px;
    padding-top: 0;
-   margin: -5px 0px -5px 0px;
+   margin: 5px 0px -5px 0px;
    font-family: Arial, Helvetica, sans-serif;
    font-weight: bold;
    

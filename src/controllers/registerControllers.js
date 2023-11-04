@@ -2,7 +2,7 @@ const path = require("path");
 const { validationResult } = require('express-validator');
 const registerController = {
     register: (req, res) =>{
-        res.render(path.join(__dirname,"../views/register"))
+        return res.render(path.join(__dirname,"../views/register"))
     }
 ,
     processRegister: (req, res) => {
@@ -10,10 +10,11 @@ const registerController = {
 
         if (resultValidation.errors.length >0) {
             return res.render ('register', {
-                errors: resultValidation.mapped()
+                errors: resultValidation.mapped(),
+                oldData: req.body
             })
-        }
-
+        } 
+        return res.send ('Estás registrado. Bienvenido!')
     },
     login: (req, res) => {
         

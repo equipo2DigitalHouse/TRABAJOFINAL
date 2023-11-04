@@ -5,12 +5,15 @@ const PORT= process.env.PORT || 3002
 const methodoverride = require("method-override");
 const morgan = require("morgan")
 
-app.use(express.static("public"))
+app.use(express.static("./public"))
 app.use(express.urlencoded({extended:false})) //nos permite capturar la informacion que viene por req.body en controllerRegister
 app.use(express.json());
 
 app.use(morgan('dev'));
 app.set("view engine", "ejs")
+app.set('views', path.join(__dirname, './src/views')); // Asegúrate de que esta línea apunte al directorio correcto donde tienes tus vistas.
+
+
 
 app.use(methodoverride("_method"));
 
