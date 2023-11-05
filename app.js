@@ -10,7 +10,9 @@ app.use(express.urlencoded({extended:false})) //nos permite capturar la informac
 app.use(express.json());
 
 app.use(morgan('dev'));
-app.set("view engine", "ejs")
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 
 app.use(methodoverride("_method"));
 
