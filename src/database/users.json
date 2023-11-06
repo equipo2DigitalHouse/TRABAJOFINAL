@@ -1,0 +1,122 @@
+[
+ {
+  "id": 1,
+  "fullname": "Alice Johnson",
+  "email": "alice@example.com",
+  "password": "alicepassword",
+  "country": "United States",
+  "avatar": "avatar1.jpg"
+ },
+ {
+  "id": 2,
+  "fullname": "Bob Smith",
+  "email": "bob@example.com",
+  "password": "bobpassword",
+  "country": "Canada",
+  "avatar": "avatar2.jpg"
+ },
+ {
+  "id": 3,
+  "fullname": "Charlie Brown",
+  "email": "charlie@example.com",
+  "password": "charliepassword",
+  "country": "United Kingdom",
+  "avatar": "avatar3.jpg"
+ },
+ {
+  "id": 4,
+  "fullname": "David Lee",
+  "email": "david@example.com",
+  "password": "davidpassword",
+  "country": "Australia",
+  "avatar": "avatar4.jpg"
+ },
+ {
+  "id": 5,
+  "fullname": "Eva Wilson",
+  "email": "eva@example.com",
+  "password": "evapassword",
+  "country": "Germany",
+  "avatar": "avatar5.jpg"
+ },
+ {
+  "id": 6,
+  "fullname": "Frank Davis",
+  "email": "frank@example.com",
+  "password": "frankpassword",
+  "country": "France",
+  "avatar": "avatar6.jpg"
+ },
+ {
+  "id": 7,
+  "fullname": "Grace Anderson",
+  "email": "grace@example.com",
+  "password": "gracepassword",
+  "country": "Spain",
+  "avatar": "avatar7.jpg"
+ },
+ {
+  "id": 8,
+  "fullname": "Hannah Moore",
+  "email": "hannah@example.com",
+  "password": "hannahpassword",
+  "country": "Italy",
+  "avatar": "avatar8.jpg"
+ },
+ {
+  "id": 9,
+  "fullname": "Ian Wilson",
+  "email": "ian@example.com",
+  "password": "ianpassword",
+  "country": "Japan",
+  "avatar": "avatar9.jpg"
+ },
+ {
+  "id": 10,
+  "fullname": "Jack Taylor",
+  "email": "jack@example.com",
+  "password": "jackpassword",
+  "country": "South Korea",
+  "avatar": "avatar10.jpg"
+ },
+ {
+  "id": 11,
+  "fullname": "Katie White",
+  "email": "katie@example.com",
+  "password": "katiepassword",
+  "country": "Brazil",
+  "avatar": "avatar11.jpg"
+ },
+ {
+  "id": 12,
+  "fullname": "Liam Martinez",
+  "email": "liam@example.com",
+  "password": "hola123",
+  "country": "Mexico",
+  "avatar": "avatar12.jpg"
+ },
+ {
+  "id": 13,
+  "fullname": "Mia Hall",
+  "email": "mia@example.com",
+  "password": "miapassword",
+  "country": "China",
+  "avatar": "avatar13.jpg"
+ },
+ {
+  "id": 14,
+  "fullname": "Noah Johnson",
+  "email": "noah@example.com",
+  "password": "noahpassword",
+  "country": "India",
+  "avatar": "avatar14.jpg"
+ },
+ {
+  "id": 15,
+  "fullname": "Olivia Smith",
+  "email": "olivia@example.com",
+  "password": "oliviapassword",
+  "country": "Russia",
+  "avatar": "avatar15.jpg"
+ }
+]

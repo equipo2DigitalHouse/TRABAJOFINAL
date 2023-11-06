@@ -1,0 +1,100 @@
+.container-form{
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px; .resolucion {
+    width: 1300%;
+    text-align: center;
+    
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans',sans-serif;
+    color: white;
+    
+}
+
+    margin-top: 90px;
+    
+    
+    }
+    
+
+
+body{
+    height: 700px;
+    width: 700px;
+    background-image: url(/images/jpg/wepik-export-202308260528110Mst.png);
+    background-position: center center;
+    background-size: cover;
+    padding: 35px;
+}
+
+.container-form h2{
+    color: white;
+    margin-bottom: 15px;
+    font-size: 35px
+    
+    
+}
+.container-form p{
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: white;
+}
+.container-form a{
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    color: whitesmoke;
+    font-weight: 950;
+}
+
+.container-form a i{
+    color: white;
+    margin-right: 10px;
+}
+.container-form form .campo, textarea{
+    width: 94%;
+    padding: 15px 10px;
+    font-size: 16px;
+    border: 1px solid #eb99d9;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+}
+.container-form form textarea{
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 140px;
+    max-height: 150px;
+}
+.container-form .btn-enviar{
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: 0px;
+    background: rgb(240, 37, 105,1.5);
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.container-form .btn-enviar:hover{
+    background: #e4a9bf;
+}
+
+
+

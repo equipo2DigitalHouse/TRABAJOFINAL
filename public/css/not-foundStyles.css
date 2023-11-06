@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --RosaNeon: #FF01ED;
+    --turquesa: #00e1ff;
+    color: white;
+    --doradito:  #d7cac0;
+
+}
+body {
+    background-image: url(/images/jpg/pexels-jovydas-pinkevicius-3358953.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 750px;
+    margin: 0;
+}
+.sadface img{
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    /* background-color: transparent; */
+    position: relative;
+    }
+/* .sadface{
+    z-index: 1;   
+} */
+h2 {
+    position: relative;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    z-index: 0;
+}

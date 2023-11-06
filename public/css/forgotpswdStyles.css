@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+
+background-image: url(/images/jpg/wepik-export-202308260528110Mst.png);
+}
+
+.formLogin{
+    width: 400px;
+    height: 260px;
+    background-color: #663399;
+    margin: auto;
+    margin-top: 180px;
+    box-shadow: 7px 13px 37px #a11791;
+    border-radius: 24px;
+    padding: 20px 30px;
+}
+ .formLogin h2{
+    margin: 0;
+    text-align: center;
+    height: 50px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid;
+ }
+ .formLogin h4{
+    margin:0;
+    padding: 0px 0px 10px 10px;
+
+ }
+
+ .loginBar{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border: none;
+    padding-left: 10px;
+    background-color: #d7cac0;
+    font-size: 14px;
+    font-weight: bold;
+ }
+
+ .checkButtom{
+    width: 100%;
+    height: 30px;
+    background-color: #ed36aa65;
+    border: none;
+    color: white;
+    margin-bottom: 15px;
+ }
+ .checkButtom:hover{
+    background-color:#ed36aa93 ;
+ }
+
+.bordefinal{
+    padding-bottom: 5px;
+    border-bottom: 3px solid;
+}
+ 
