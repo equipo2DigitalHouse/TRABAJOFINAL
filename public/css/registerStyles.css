@@ -7,7 +7,9 @@ body{
 
 background-image: url(/images/jpg/wepik-export-202308260528110Mst.png);
 }
-
+.error-message{
+   color: red;
+}
 .formLogin{
     /* width: 420px;
     height: 440px; */
