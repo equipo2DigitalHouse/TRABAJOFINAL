@@ -32,7 +32,7 @@ const loginController = {
             return res.render(path.join(__dirname, "../views/login"), { errors: [{ msg: "Credenciales inválidas" }] },);
         } else {
             req.session.usuarioLogedo = usuarioALoguearse;
-            res.send("el ususario logueado es "+ req.session.usuarioLogedo.email), { errors: errors.array() };
+            res.redirect("/check"), { errors: errors.array() };
         }
     }
 };
