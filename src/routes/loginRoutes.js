@@ -10,4 +10,13 @@ router.get("/login",[
 
 router.post("/login",loginController.processLogin)
 
+router.get("/check",function(req,res) {
+    if(req.session.usuarioLogedo == undefined){
+        res.send("el usuario no esta logueado")
+    }else{
+        res.send("el ususario logueado es "+ req.session.usuarioLogedo.email);
+    }
+});
+
+
 module.exports = router;
