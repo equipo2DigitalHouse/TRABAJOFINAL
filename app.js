@@ -3,7 +3,8 @@ const path = require("path");
 const app = express();
 const PORT= process.env.PORT || 3002
 const methodoverride = require("method-override");
-const morgan = require("morgan")
+const morgan = require("morgan");
+const session = require("express-session");
 
 app.use(express.static("public"))
 app.use(express.urlencoded({extended:false})) //nos permite capturar la informacion que viene por req.body en controllerRegister
@@ -28,9 +29,13 @@ const loginRoutes = require("./src/routes/loginRoutes");
 const productsRoutes = require("./src/routes/productsRoutes");
 const registerRoutes = require("./src/routes/registerRoutes");
 const contactsRoutes = require("./src/routes/contactsRoutes");
+const cookies = require("./src/routes/cookies");
+
 
 app.listen(PORT , () =>
 console.log(`Servidor escuchando en puerto ${PORT}`));
+
+app.use(session({ secret: "Secreto" }));
 
 app.use(adminFormRoutes);
 app.use(contactsRoutes);
@@ -40,6 +45,8 @@ app.use(listRoutes);
 app.use(loginRoutes);
 app.use(productsRoutes);
 app.use(registerRoutes);
+app.use(cookies);
+
 
 app.use((req,res,next)=>{
     res.status(404).render(path.join(__dirname,"./src/views/not-found"));
