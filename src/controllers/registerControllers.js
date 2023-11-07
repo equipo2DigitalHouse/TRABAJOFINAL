@@ -44,17 +44,17 @@ const registerController = {
         return res.redirect('/user/login')
     },
 
-    login: (req, res) => {
+    // login: (req, res) => {
         
-        return res.render ('login');
-    },
+    //     return res.render ('login');
+    // },
 
-    loginProcess: (req, res) =>  {
-        const userToLogin = User.findByField('email', req.body.email);
-        if(userToLogin) {
-        }
-        return res.send(userToLogin);
-        },
+    // loginProcess: (req, res) =>  {
+    //     const userToLogin = User.findByField('email', req.body.email);
+    //     if(userToLogin) {
+    //     }
+    //     return res.send(userToLogin);
+    //     },
     
     profile: (req, res) => {        
         return res.render ('home');
