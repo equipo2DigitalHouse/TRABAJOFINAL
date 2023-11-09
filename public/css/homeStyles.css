@@ -339,6 +339,60 @@ button{
 }
 
 
+.container-pop-up {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 7px 13px 37px #000;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.pop-up{
+    display: flex;
+    padding: 10px 0 15px 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:33%;
+    background-color: #663399;
+    border-radius: 12px;
+    
+}
+.pop-up p{
+   padding: 10px 0 20px 0; 
+   font-family: Arial, Helvetica, sans-serif;
+}
+.button-pop-up{
+    display: flex;
+    /* background-color: greenyellow; */
+    width: 60%;
+    justify-content: space-between;
+}
+
+.button-pop-up button{
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    width: 100px;
+    background: linear-gradient(to right,  rgba(218, 195, 161, 0.7), rgba(202, 136, 223, 0.7));
+    font-family:Arial;
+}
+
+.show{ 
+    pointer-events: auto;
+    opacity: 1;
+}
+
+
+
+
 @media (max-width: 480px){
     header{
         margin: 0em 4em 1em 0em;

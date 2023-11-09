@@ -18,7 +18,7 @@
         <div id="contenedorLogoShake">
                     <img id="logoShake" src="/images/jpg/ShakeBatido.jpeg" alt="">
         </div>
-        <div class="logoCarrito">
+        <div class="logoCarrito" id="logoCarrito">
             <a href="/list">
                 <img src="/images/svg/carrito.svg" alt="">
             </a>
@@ -49,6 +49,17 @@
             <li><a href="/contacts">Trabajá con nosotros</a></li>
         </ol>
     </nav>  
+    <div class="container-pop-up" id="container-pop-up">
+        <div class="pop-up">
+            <h2>No estas conectado</h2>
+            <p>Debes iniciar sesión para poder acceder</p>
+            <div class="button-pop-up">
+                <button id="close">cerrar</button>
+                <button id="login">iniciar Sesión</button>
+            </div>
+        </div>
+    </div>
+        <script src="../middlewares/authLogin.js"></script>
 </body>
     <footer>
         <div class="footer-flex-container">
@@ -77,5 +88,7 @@
             </div>
         </div>
     </footer>
+    
+
     
 </html>
