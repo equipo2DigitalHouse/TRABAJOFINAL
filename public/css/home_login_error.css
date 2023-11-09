@@ -350,8 +350,8 @@ button{
     justify-content: center;
     align-items: center;
     box-shadow: 7px 13px 37px #000;
-    opacity: 0;
-    pointer-events: none;
+    opacity: 1;
+    /* pointer-events: none; */
 }
 
 .pop-up{
@@ -372,8 +372,9 @@ button{
 .button-pop-up{
     display: flex;
     /* background-color: greenyellow; */
-    width: 60%;
-    justify-content: space-between;
+    width: 70%;
+    height: 27.5px;
+    justify-content: space-around;
 }
 
 .button-pop-up button{
@@ -385,35 +386,11 @@ button{
     font-family:Arial;
 }
 
-.show{ 
-    pointer-events: auto;
-    opacity: 1;
+.button-pop-up button:hover{
+    width: 110px;
+    height: 27.5px;
+    color: pink ;
 }
-
-.nameLoginHome {
-    display: flex;
-    align-items: center;
-    background-color: #aa4e9f;
-    height: 40px;
-    border-radius: 12px;
-  }
-  
-  .nameLoginHome h2 {
-    display: flex;
-    align-items: center;
-    text-align: center; padding: 0 10px 0 10px;
-    
-  }
-  
-  
-  
-  
-  
-  
-
-
-
-
 
 
 @media (max-width: 480px){
