@@ -337,7 +337,9 @@ button{
     background-color: rgba(255, 255, 255, 0.5);
     display: inline
 }
-
+body{
+    pointer-events: none;
+}
 
 .container-pop-up {
     position: fixed;
@@ -351,7 +353,7 @@ button{
     align-items: center;
     box-shadow: 7px 13px 37px #000;
     opacity: 1;
-    /* pointer-events: none; */
+     pointer-events: painted; 
 }
 
 .pop-up{
@@ -393,7 +395,13 @@ button{
 }
 
 
+
 @media (max-width: 480px){
+    .pop-up{
+        width:80%;
+        pointer-events: painted;
+    }
+    
     header{
         margin: 0em 4em 1em 0em;
         display: flex; 
@@ -569,6 +577,10 @@ button{
 
 /*Extra Small devices*/
 @media (min-width: 481px) and (max-width: 767px){
+    .pop-up{
+        width:80%;
+        pointer-events: painted;
+    }
     header{
         margin: 0em 4em 1em 0em;
         display: flex; 
@@ -734,12 +746,19 @@ button{
 }
 
 /*Small tablets*/
-@media (min-width: 768px) and (max-with: 991px){
-    /*styles*/
+@media (min-width: 768px) and (max-width: 991px){
+    .pop-up{
+        width:60%;
+        pointer-events: painted;
+    }
 }
 
 /*large tablets/laptops*/
 @media (min-width: 992px) and   (max-width: 1199px){
+    .pop-up{
+        width:50%;
+        pointer-events: painted;
+    }
     /*styles */
 }
 
