@@ -390,29 +390,6 @@ button{
     opacity: 1;
 }
 
-.nameLoginHome {
-    display: flex;
-    align-items: center;
-    background-color: #aa4e9f;
-    height: 40px;
-    border-radius: 12px;
-  }
-  
-  .nameLoginHome h2 {
-    display: flex;
-    align-items: center;
-    text-align: center; padding: 0 10px 0 10px;
-    
-  }
-  
-  
-  
-  
-  
-  
-
-
-
 
 
 
