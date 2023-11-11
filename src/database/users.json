@@ -9,9 +9,9 @@
  },
  {
   "id": 2,
-  "fullname": "Bob Smith",
-  "email": "bob@example.com",
-  "password": "bobpassword",
+  "fullname": "Admin",
+  "email": "admin@gmail.com",
+  "password": "admin123",
   "country": "Canada",
   "avatar": "avatar2.jpg"
  },
