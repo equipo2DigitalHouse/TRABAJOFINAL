@@ -14,7 +14,7 @@ const getProductById = require("../controllers/getProductById");
 router.get("/", productsController.products);
 router.get("/products",getAllProducts);
 
-router.get("/product/:id",adminCheck,getProductById);
+router.get("/product/:id",getProductById);
 
 router.delete('/product/delete/:id', deleteProduct);
 
