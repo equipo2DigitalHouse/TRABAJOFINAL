@@ -3,6 +3,9 @@ const router = express.Router();
 const multer = require("multer");
 const path = require("path");
 const adminFormController = require("../controllers/adminFormControllers");
+const adminCheck = require("../middlewares/admincheck");
+// const session = require('express-session');
+
 
 const storage = multer.diskStorage({
     destination:(req, file, cb) => {
@@ -16,8 +19,12 @@ const storage = multer.diskStorage({
 const uploadBar = multer({storage})
 
 
+// router.use(session({
+//     secret: 'Secreto',
+// }));
 
-router.get("/adminform", adminFormController.adminForm);
+router.get("/adminform",adminCheck, adminFormController.adminForm);
+
 router.post("/newproduct", uploadBar.single("image"),adminFormController.addNewProduct )
 
 

@@ -1,15 +1,19 @@
-const express = require('express');
+const adminCheck = (req, res, next) => {
 
-const adminCheck = (req,res) => {
+    if (req.session.usuarioLogedo == undefined) {
+        res.redirect("../home_login_error")
+        }else if( req.session.usuarioLogedo.email !== "admin@gmail.com"){
+        res.send("usted no tiene derechos de acceder a esta página")
+        }else{
+            next();
+        }
+
     
-    // if(req.session.usuarioLogedo.email !== "admin@gmail.com"){
-    //     res.send("no tienes los permisos para acceder aquí")
-    //     console.log("hola")
-    // }else{
-    //     next();
-    //     console.log("hola")
-    // }
-    // console.log("hola")
 };
 
 module.exports = adminCheck;
+
+
+
+
+
