@@ -25,17 +25,8 @@ const validations= [
     body('Email').notEmpty().withMessage('Escribe tu Email').bail()
     .isEmail().withMessage('Debes escribir un formato de correo electrónico válido'),
     body('userName').notEmpty().withMessage('Escribe tu nombre de usuario'),
-    body('avatar').notEmpty().withMessage('Selecciona tu foto de perfil'),
     body('password').notEmpty().withMessage('Escribe tu contraseña'),
-    body('avatar').custom((value, { req }) => {
-      let file = req.file;
-      
 
-      if (!file) {
-        throw new Error ('Tienes que cargar una imagen');
-      }
-      return true;
-    })
 ]
 
 const registerController = require("../controllers/registerControllers");

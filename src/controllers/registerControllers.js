@@ -1,4 +1,5 @@
 const path = require("path");
+const User = require('../../models/User');
 const { validationResult } = require('express-validator');
 const registerController = {
     register: (req, res) =>{
@@ -7,7 +8,6 @@ const registerController = {
 ,
     processRegister: (req, res) => { //este procesa la solicitud de registro
         const resultValidation= validationResult(req); 
-        return res.send (resultValidation.mapped())
 
 
         if (resultValidation.errors.length > 0) {
@@ -16,7 +16,7 @@ const registerController = {
             });
         }
         User.create (req.body);
-        return res.render ('Ok. Se guardó el usuario')
+        return res.send ('Ok. Se guardó el usuario')
     },
     login: (req, res) => {
         

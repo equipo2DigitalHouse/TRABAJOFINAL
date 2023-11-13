@@ -118,5 +118,21 @@
   "password": "oliviapassword",
   "country": "Russia",
   "avatar": "avatar15.jpg"
+ },
+ {
+  "id": 16,
+  "name": "Martin",
+  "surname": "Assell",
+  "Email": "martinassell@gmail.com",
+  "userName": "asdf",
+  "password": "asdf"
+ },
+ {
+  "id": 17,
+  "name": "Martin",
+  "surname": "Assell",
+  "Email": "martinassell@gmail.com",
+  "userName": "asdf",
+  "password": "asfd"
  }
 ]
