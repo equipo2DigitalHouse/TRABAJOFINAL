@@ -22,10 +22,12 @@
             <p>Fecha hasta que estará disponible: <%= allProducts[i].date %> </p>
 
             <% if(req.session.usuarioLogedo !== undefined ){ %>
+                <% if(req.session.usuarioLogedo.email == "admin@gmail.com") { %>
                 <% console.log(req.session.usuarioLogedo) %>
             <form action="/product/delete/<%= allProducts[i].id %>?_method=DELETE" method="POST">
                 <button type="submit" style="margin-top: 10px;">Delete</button>
             </form>
+            <% } %>
         <% }else{ console.log(req.session.usuarioLogedo) %> 
             <% } %>
         </div>
