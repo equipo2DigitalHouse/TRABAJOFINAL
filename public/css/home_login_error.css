@@ -1,0 +1,773 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --RosaNeon: #FF01ED;
+    --turquesa: #00e1ff;
+    color: white;
+    --doradito:  #d7cac0;
+
+}
+body {
+    background-image: url(/images/jpg/pexels-jovydas-pinkevicius-3358953.jpg);
+    background-size: cover;
+}
+
+header{
+    margin: 2em 2em 3em 0em;
+    display: flex; 
+    justify-content: space-between; 
+}
+#logoShake {
+    box-shadow: 1px 10px 10px 10px rgba(255, 255, 255, 0.89); /* Cambia los valores para ajustar la sombra */
+    overflow: hidden;
+    filter: brightness(1); 
+    width: 23em;
+    height: auto;
+
+}
+.contenedorLogoShake{
+    width: fit-content;
+    height: auto;
+}
+
+.logoCarrito{
+    width: 50px;
+    height: 50px;
+    background-color: #663399;
+    border-radius: 40%;
+    text-align-last: center;
+}
+
+.logoCarrito img{
+    width: 30px;
+    height: 30px;
+}
+
+.logoCarrito:hover{
+    background-color:#b20cffd3;
+    box-shadow: #a11791;
+    transform: translateY(-5px); }
+
+.carro{
+    width: auto;
+    height: auto;
+}
+#carrito{
+    transition: transform 0.3s ease-in-out; 
+    border-radius: 40%;
+    box-shadow: 1px 10px 10px 10px rgba(223, 151, 223, 0.89); }
+   
+
+#carrito:hover {
+    transform: translateY(-5px); }
+.LoginUser,
+.LoginUser label,
+.LoginUser button,
+.LoginUser input {
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    border: 2px solid #a11791 ;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+
+}
+#search-form {
+    position: absolute;
+    top: 50px; 
+    right: 20px; }
+
+#textoCarrito{
+    font-family: 'Arial Narrow Bold', sans-serif;
+    color:var(--turquesa) ;
+    text-shadow: 1px 1px 2px rgba(1, 48, 70, 0.993); /* Valores de sombra */
+
+}
+.navBar {
+    background-color: #aa4e9f;
+    box-shadow: 15px 13px 37px #a11791;
+    border-radius: 24px;
+    padding: 20px 0; 
+    text-align: center; 
+    position: relative; 
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:medium;
+    
+}
+
+.navBar ol {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; 
+    position: relative; /* Cambiar a relative para que los elementos internos usen este como referencia */
+    font-style: black;
+
+}
+
+.navBar li {
+    margin-right: 15px;
+    font-style: black;
+
+}
+
+.navBar a {
+    text-decoration: none;
+    color: white;
+    padding: 14px 16px;
+    display: block;
+    font-style: black;
+    font-size: medium;
+
+}
+
+.navBar .dropdown {
+    position: relative;
+    font-style: black;
+}
+.desplegables{
+    font-style: black;
+}
+
+.navBar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 7px 13px 37px #a11791;
+    z-index: 1;
+    font-style: black;
+    color: black;
+}
+
+.navBar .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    font-style: black;
+
+}
+
+.navBar .dropdown:hover .dropdown-content {
+    display: block;
+    font-style: black;
+
+}
+
+#Logo{
+    top: 10%;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+#seguro{
+    font-size: medium;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    color:var(--turquesa) ;
+    text-shadow: 1px 1px 2px rgba(1, 48, 70, 0.993); /* Valores de sombra */
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 2px ;
+
+}
+.navBar .dropdown-content a {
+    color: black; /* Cambia el color a negro */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+}
+
+.navBar .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: black; /* Cambia el color a negro cuando se hace hover */
+}
+
+.navBar .dropdown:hover .dropdown-content {
+    display: block;
+}
+.icono{
+    height: 15px;
+    width: 15px;
+    position: relative;
+    
+}
+
+.formularioContacto{
+    width: fit-content;
+    height: fit-content;
+    background-color: #663399;
+    box-shadow: 1px 20px 37px #a11791;
+    border-radius: 24px;
+    padding: 7px 8px;
+    display: flex 4;
+}
+footer {
+    padding: 20px;
+}
+
+.footer-flex-container {
+    margin-top: 15em;
+    margin-left:1em;
+    margin-right: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+.textoContacto{
+    font-family: 'Arial Narrow Bold', sans-serif;
+    color:var(--turquesa) ;
+}
+
+.textarea {
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    padding: 10px;
+    resize: vertical;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+
+#textarea:hover{
+    background-image: none;
+}
+#textarea::placeholder {
+    font-size: 16px;
+    color: var(--RosaNeon);
+}
+
+.iconoContacto{
+    height: 25px;
+    width: 25px;
+}
+.textoSmall{
+    font-size: small;
+    font-family: sans-serif;
+    color: #FF01ED;
+}
+#location{
+    color: azure;
+    text-shadow: #00e1ff;
+
+}
+
+#keep{
+    font-size: larger;
+    position: absolute;
+    left: 50px;
+    bottom:300px;
+    
+}
+.socialMedia{
+    list-style: none;
+}
+.socialMedia ol {
+    font-size: large;
+    justify-content:center;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline;
+    width: 100%;
+}
+
+.socialMedia li {
+    margin-right: 15px; /* Espaciado entre elementos */
+    font-size: large;
+}
+
+.socialMedia li a {
+    text-decoration: none;
+    font-size: larger;
+    background-color: rgba(255, 255, 255, 0.5); /* Color de fondo transparente */   
+}
+
+.contenedorRedes{
+border: #FF01ED;
+border: 2px solid #000; /* Cambia el color y el grosor del borde según tus preferencias */
+width: max-content; 
+background-color: rgba(255, 255, 255, 0.5); /* Color de fondo transparente */
+color:black;
+background: linear-gradient(to right,  rgba(218, 195, 161, 0.7), rgba(202, 136, 223, 0.7));
+}
+
+#textoCarrito{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 2px;
+    text-align: center;
+
+}
+li:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 2px;
+}
+
+#Contactanos{
+    background-color: rgba(199, 69, 238, 0.637);
+    border-radius: 50%;
+    text-align: center;
+}
+#carrito:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 2px;
+
+}
+footer{
+    display: inline
+}
+.checkButtom{
+    background: linear-gradient(to right,  rgba(218, 195, 161, 0.7), rgba(202, 136, 223, 0.7));
+    font-family:Arial;
+}
+button{
+    background: linear-gradient(to right,  rgba(218, 195, 161, 0.7), rgba(202, 136, 223, 0.7));
+    font-family:Arial;
+
+}
+#carrito{
+    transition: transform 0.3s ease-in-out; /* Agregar una transición suave */
+    border-radius: 40%;
+    box-shadow: 1px 10px 10px 10px rgba(223, 151, 223, 0.89); /* Cambia los valores para ajustar la sombra */
+}
+#textoCarrito{
+    background-color: rgba(255, 255, 255, 0.5);
+    display: inline
+}
+body{
+    pointer-events: none;
+}
+
+.container-pop-up {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 7px 13px 37px #000;
+    opacity: 1;
+     pointer-events: painted; 
+}
+
+.pop-up{
+    display: flex;
+    padding: 10px 0 15px 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:33%;
+    background-color: #663399;
+    border-radius: 12px;
+    
+}
+.pop-up p{
+   padding: 10px 0 20px 0; 
+   font-family: Arial, Helvetica, sans-serif;
+}
+.button-pop-up{
+    display: flex;
+    /* background-color: greenyellow; */
+    width: 70%;
+    height: 27.5px;
+    justify-content: space-around;
+}
+
+.button-pop-up button{
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    width: 100px;
+    background: linear-gradient(to right,  rgba(218, 195, 161, 0.7), rgba(202, 136, 223, 0.7));
+    font-family:Arial;
+}
+
+.button-pop-up button:hover{
+    width: 110px;
+    height: 27.5px;
+    color: pink ;
+}
+
+
+
+@media (max-width: 480px){
+    .pop-up{
+        width:80%;
+        pointer-events: painted;
+    }
+    
+    header{
+        margin: 0em 4em 1em 0em;
+        display: flex; 
+        justify-content: space-between; 
+    }
+    #logoShake {
+        box-shadow: 1px 10px 10px 10px rgba(255, 255, 255, 0.89); /* Cambia los valores para ajustar la sombra */
+        overflow: hidden;
+        filter: brightness(1); 
+        width: 13em;
+        height: auto;
+        margin: 0 2em 1em 2em;
+    
+    }
+    .LoginUser,
+    .LoginUser label,
+    .LoginUser button,
+    .LoginUser input {
+        font-family: sans-serif;
+        border: 2px solid #a11791 ;
+        width: fit-content;
+        font-size: xx-small;
+        display: flex;
+        flex-direction: column;
+
+    
+    }
+    .LoginUser{
+        width: min-content;
+        height: min-content;
+
+    }
+    .LoginUser label {
+        margin-bottom: 1px; /* Ajusta el espacio entre las etiquetas y los campos de entrada según tus preferencias */
+    }
+    .LoginUser input {
+        margin-bottom: 1px; /* Ajusta el espacio entre las etiquetas y los campos de entrada según tus preferencias */
+    }
+    .logoCarrito{
+        width: 25px;
+        height: 25px;
+
+    }
+    .logoCarrito img{
+        width: 15px;
+        height: 15px;
+    }
+    #textoCarrito{
+
+        font-size: xx-small;
+    }
+    .navBar {
+        padding: none; 
+        margin-top: 3em;
+
+
+
+    }
+    .icono{
+        height: 10px;
+        width: 10px;
+        position: relative;
+    }
+    .navBar{
+    padding: 0;
+     }
+     .navBar a {
+        padding: 14px 16px;
+
+
+        font-size: xx-small;
+    }
+    .navBar ol {
+        display: flex;
+        width: 85%; 
+    }
+    .navBar li {
+        margin-right: 5px;
+        font-style: black;
+    
+    }
+
+    .formularioContacto{
+        width: fit-content;
+        height: fit-content;
+        background-color: #663399;
+        box-shadow: 1px 20px 37px #a11791;
+        border-radius: 24px;
+        padding: 7px 8px;
+        display: flex 4;
+        justify-content:end; 
+        font-size: x-small;
+
+    }
+    .textoContacto{
+        font-family: 'Arial Narrow Bold', sans-serif;
+        color:var(--turquesa) ;
+        font-size: x-small;
+
+    }
+    .textoSmall{
+        font-size: xx-small;
+        font-family: sans-serif;
+        color: #FF01ED;
+    }
+    
+    .textarea {
+        font-family: 'Times New Roman', Times, serif;
+        width: 100%;
+        padding: 10px;
+        resize: vertical;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: x-small;
+        }
+        #textarea::placeholder {
+            font-size: x-small;
+        }
+        .iconoContacto{
+            height: 12px;
+            width: 12px;
+        }
+        #keep{
+            font-size: larger;
+            position: absolute;
+            left: 50px;
+            bottom:300px;
+            
+        }
+        .socialMedia{
+            list-style: none;
+        }
+        .socialMedia ol {
+            font-size: smaller;
+            justify-content:center;
+            text-align: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline;
+            width: 100%;
+        }
+        
+        .socialMedia li {
+            margin-right: 15px; /* Espaciado entre elementos */
+            font-size: smaller;
+        }
+        
+        .socialMedia li a {
+            text-decoration: none;
+            font-size: larger;
+            background-color: rgba(255, 255, 255, 0.5); /* Color de fondo transparente */ 
+            font-size:small;
+  
+        }
+        
+        .contenedorRedes{
+        border: #FF01ED;
+        border: 2px solid #000; /* Cambia el color y el grosor del borde según tus preferencias */
+        width: max-content; 
+        background-color: rgba(255, 255, 255, 0.5); /* Color de fondo transparente */
+        color:black;
+        background: linear-gradient(to right,  rgba(218, 195, 161, 0.7), rgba(202, 136, 223, 0.7));
+        ;
+        margin-left: 1em
+    }
+        .socialMedia{
+            font-size: smaller;
+        }
+        
+}
+
+
+/*Extra Small devices*/
+@media (min-width: 481px) and (max-width: 767px){
+    .pop-up{
+        width:80%;
+        pointer-events: painted;
+    }
+    header{
+        margin: 0em 4em 1em 0em;
+        display: flex; 
+        justify-content: space-between; 
+    }
+    #logoShake {
+        width: 20em;
+        height: auto;
+        margin: 0 2em 1em 2em;
+    
+    }
+    .LoginUser,
+    .LoginUser label,
+    .LoginUser button,
+    .LoginUser input {
+        font-family: sans-serif;
+        border: 2px solid #a11791 ;
+        width: fit-content;
+        font-size: small;
+        display: flex;
+        flex-direction: column;
+
+    
+    }
+    .LoginUser{
+        width: min-content;
+        height: min-content;
+
+    }
+    .LoginUser label {
+        margin-bottom: 1px; /* Ajusta el espacio entre las etiquetas y los campos de entrada según tus preferencias */
+    }
+    .LoginUser input {
+        margin-bottom: 1px; /* Ajusta el espacio entre las etiquetas y los campos de entrada según tus preferencias */
+    }
+    .logoCarrito{
+        width: 35px;
+        height: 35px;
+
+    }
+    .logoCarrito img{
+        width: 35px;
+        height: 35px;
+    }
+    #textoCarrito{
+        font-size: small;
+    }
+    .navBar {
+        width:100%;
+        padding: none; 
+        margin-top: 3em;
+    }
+    .icono{
+        height: 15px;
+        width: 15px;
+        position: relative;
+    }
+    .navBar{
+    padding: 0;
+     }
+     .navBar a {
+        padding: 14px 16px;
+
+
+        font-size: small;
+    }
+    .navBar ol {
+        display: flex;
+        width: 100%; 
+    }
+    .navBar li {
+        margin-right: 5px;
+        font-style: black;
+    
+    }
+
+    .formularioContacto{
+        width: fit-content;
+        height: fit-content;
+        background-color: #663399;
+        box-shadow: 1px 20px 37px #a11791;
+        border-radius: 24px;
+        padding: 7px 8px;
+        display: flex 4;
+        justify-content:end; 
+        font-size: small;
+
+    }
+    .textoContacto{
+        font-family: 'Arial Narrow Bold', sans-serif;
+        color:var(--turquesa) ;
+        font-size: small;
+
+    }
+    .textoSmall{
+        font-size: small;
+        font-family: sans-serif;
+        color: #FF01ED;
+    }
+    
+    .textarea {
+        font-family: 'Times New Roman', Times, serif;
+        width: 100%;
+        padding: 10px;
+        resize: vertical;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: small;
+        }
+        #textarea::placeholder {
+            font-size: small;
+        }
+        .iconoContacto{
+            height: 17px;
+            width: 17px;
+        }
+        #keep{
+            font-size: larger;
+            position: absolute;
+            left: 50px;
+            bottom:300px;
+            
+        }
+        .socialMedia{
+            list-style: none;
+        }
+        .socialMedia ol {
+            font-size: small;
+            justify-content:center;
+            text-align: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline;
+            width: 100%;
+        }
+        
+        .socialMedia li {
+            margin-right: 15px; /* Espaciado entre elementos */
+            font-size: small;
+        }
+        
+        .socialMedia li a {
+            text-decoration: none;
+            font-size: larger;
+            background-color:linear-gradient(to right,  rgba(218, 195, 161, 0.7), rgba(202, 136, 223, 0.7));
+            font-size:small;
+  
+        }
+        
+        .contenedorRedes{
+        border: #FF01ED;
+        border: 2px solid #000; /* Cambia el color y el grosor del borde según tus preferencias */
+        width: max-content; 
+        background-color: rgba(255, 255, 255, 0.5); /* Color de fondo transparente */
+        color:black;
+        background: linear-gradient(to right,  rgba(218, 195, 161, 0.7), rgba(202, 136, 223, 0.7));
+       }
+        .socialMedia{
+            font-size: small;
+        }
+        
+}
+
+/*Small tablets*/
+@media (min-width: 768px) and (max-width: 991px){
+    .pop-up{
+        width:60%;
+        pointer-events: painted;
+    }
+}
+
+/*large tablets/laptops*/
+@media (min-width: 992px) and   (max-width: 1199px){
+    .pop-up{
+        width:50%;
+        pointer-events: painted;
+    }
+    /*styles */
+}
+
+/*Desktops*/
+@media (min-width: 1200) and (max-width: 1919px){
+    /*styles*/
+}
+
+/* Extra large screens */
+@media (min-width: 1920px) {
+    /* styles */
+}

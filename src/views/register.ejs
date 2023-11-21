@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="/css/registerStyles.css">
+</head>
+<body>
+    <header>
+        
+    </header>
+    <main >  
+        <form method="post" action="/register" enctype="multipart/form-data">
+            <div class="formLogin">
+                <h2>Registrate en nuestra app</h2>
+                <div>
+                    <div>
+                        <p class="fontText">Nombre</p>
+                    </div>
+                    <div>
+                        <input class="loginBar <%= locals.errors && errors.name ? 'is-invalid' : '' %>" type="text" name="name" id="" placeholder="Nombre" value="<%= locals.oldData ? oldData.name : '' %>">
+                        <% if (locals.errors && errors.name) { %>
+                            <p class="error-message"><%= errors.name.msg %></p>
+                        <% } %>
+                    <div>
+                        <p class="fontText"> Apellido</p>
+                    </div>
+                    <div>
+                        <input class="loginBar <%= locals.errors && errors.surname ? 'is-invalid' : '' %>" type="text" name="surname" id="" placeholder="Apellido" value="<%= locals.oldData ? oldData.surname : '' %>">
+                        <% if (locals.errors && errors.surname) { %>
+                            <p class="error-message"> <%= errors.surname.msg %></p>
+                        <% } %>      
+                </div>
+                </div>
+                <div>
+                <p class="fontText"> Email</p>
+                <div>
+                    <input class="loginBar<%= locals.errors && errors.Email ? 'is-invalid' : '' %>" type="email" name="Email" id="" placeholder="Email" value="<%= locals.oldData ? oldData.Email : '' %>">
+                    <% if (locals.errors && errors.Email) { %>
+                        <p class="error-message"> <%= errors.Email.msg %></p>
+                    <% } %>   
+                </div>
+                </div>
+                <div>
+                    <p class="fontText"> Nombre de usuario</p>
+                </div>
+                <input class="loginBar<%= locals.errors && errors.userName ? 'is-invalid' : '' %>" type="text" name="userName" id="" placeholder="Nombre de Usuario" value="<%= locals.oldData ? oldData.userName : '' %>">
+                    <% if (locals.errors && errors.userName) { %>
+                        <p class="error-message"></p><%= errors.userName.msg %></p>
+                    <% } %>   
+                    <input class="loginBar<%= locals.errors && errors.password ? 'is-invalid' : '' %>" type="password" name="password" id="" placeholder="Contraseña" value="<%= locals.oldData ? oldData.password : '' %>">
+                    <% if (locals.errors && errors.password) { %>
+                        <p class="error-message"></p><%= errors.password.msg %></p>
+                    <% } %> 
+                </div>
+                <!-- <div>
+                    <div>
+                        <p class="fontText">Repite tu contraseña</p>
+                    </div>
+                    <input class="loginBar" type="password" name="rptPassword" id="" placeholder="Repetir Contraseña" >
+                                 <p class="error-message"></p>
+                    </div>
+                <div> -->
+                    <label  class="fontText" for="avatar">Sube tu imagen de perfil:</label>
+                    <input class="fontText" type="file"  name="avatar" >
+                        <% if (locals.errors && errors.avatar) { %>
+                            <p class="error-message">
+                            <%= errors.avatar.msg %>
+                        <% } %> 
+                </div>
+                <div>
+                    <input class="checkButtom" type="submit" value="Ingresar">
+                </div>
+                <div class="ARAR">
+                    <p> ¿Ya estás registrado?</p>
+                </div>
+                <div class="log_in">
+                    <p><a href="/login">Inicia sesión aquí</a></p>
+                </div>
+            </div>
+        </div>
+    </form>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>

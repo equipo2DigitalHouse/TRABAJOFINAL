@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="css/loginStyles.css">
+</head>
+<body>
+    <header>
+        
+    </header>
+    <main>
+        <% if (errors && errors.length > 0) { %> 
+            <p style="color: red;">ERROR</p>
+            <ul>
+                <% for (let i = 0; i < errors.length; i++) { %>
+                <li>
+                    <%= errors[i].msg %>
+                </li>
+                <% } %>
+            </ul>
+        <% } %>
+
+        <form method="POST">  
+            <div class="formLogin">
+                <h2>
+                    Formulario Login
+                </h2>
+                <div>
+                    <div>
+                        <input class="loginBar" type="text" name="email" id="" placeholder=" E-mail" required>
+                    </div>
+                    <div>
+                        <input class="loginBar" type="password" name="password" id="" placeholder="Contraseña" required>
+                    </div>
+                    <div>
+                        <input class="checkButtom" type="submit" value="Ingresar">
+                    </div>
+                    <div class="forgotPswd">
+                        <p><a href="/forgotpswd">¿Olvidaste tu Contraseña?</a></p>
+                    </div>
+                    <div class="notAlreadyUser">
+                        <label>¿Aún no eres usuario?</label><p><a href="/register">Registrate aquí</a></p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>
