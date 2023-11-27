@@ -10,10 +10,11 @@ const getAllProducts = {
         })
     },
     create: function(req,res) {
+        // const image = req.file ? req.file.filename : '';
         db.Productos.create({
             product_name: req.body.product_name,
             description: req.body.description,
-            image: req.body.image,
+            image: req.file.filename,
             date: req.body.date,
             price: req.body.price
         })
