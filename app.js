@@ -31,7 +31,6 @@ const registerRoutes = require("./src/routes/registerRoutes");
 const contactsRoutes = require("./src/routes/contactsRoutes");
 const cookies = require("./src/routes/cookies");
 
-
 app.listen(PORT , () =>
 console.log(`Servidor escuchando en puerto ${PORT}`));
 

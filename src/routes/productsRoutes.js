@@ -8,17 +8,12 @@ const confirmModifyProduct = require("../controllers/confirmModifyProduct");
 const getAllProducts = require("../controllers/getAllProducts");
 const deleteProduct = require("../controllers/deleteProductController");
 const getProductById = require("../controllers/getProductById");
-
 // const { getAllProducts , getProductById, deleteProduct, productsController } = require("../controllers");
 
-// router.use(session({
-//     secret: 'Secreto',
-// }));
 
 router.get("/", productsController.products);
-router.get("/products", (req, res) => {
-    getAllProducts(req, res);
-});
+
+router.get("/products", getAllProducts.list)
 
 router.get("/product/:id",getProductById);
 
