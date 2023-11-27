@@ -1,3 +1,4 @@
+const db = require("../../database/models");
 const path = require("path");
 const { check, validationResult, body } = require("express-validator");
 const userModule = require("../database/users.json");
@@ -5,15 +6,13 @@ const express = require("express");
 const router = express.Router();
 
 const loginController = {
+    
     login: (req, res) => {
         res.render(path.join(__dirname, "../views/login"), { errors: [] });;
     },
     processLogin: (req, res) => {
         let errors = validationResult(req);
         let users = userModule; 
-
-        // console.log('users:', users); 
-        // console.log('req.body:', req.body); 
 
         let usuarioALoguearse;
 
@@ -26,13 +25,11 @@ const loginController = {
             }
         }
 
-        // console.log('usuarioALoguearse:', usuarioALoguearse); 
 
         if (usuarioALoguearse === undefined) {
             return res.render(path.join(__dirname, "../views/login"), { errors: [{ msg: "Credenciales inválidas" }] },);
         } else {
             req.session.usuarioLogedo = usuarioALoguearse;
-            // console.log(usuarioALoguearse);
             res.redirect("/"), { errors: errors.array() };
         }
     }
