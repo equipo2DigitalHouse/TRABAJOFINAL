@@ -9,27 +9,26 @@ const getAllProducts = {
                 res.render(ruta, { req: req, productos: productos });
         })
     },
-    create: function(req,res) {
-        // const image = req.file ? req.file.filename : '';
-        db.Productos.create({
-            product_name: req.body.product_name,
-            description: req.body.description,
-            image: req.file.filename,
-            date: req.body.date,
-            price: req.body.price
-        })
-        .then (function(result) {
-            db.Productos.findAll()
-            .then(function(productos){
-                res.render(path.join(__dirname,"../views/products"), {productos: productos, req},)
-
-            })
-        })
+    create: async function(req, res) {
+        try {
+            const result = await db.Productos.create({
+                product_name: req.body.product_name,
+                description: req.body.description,
+                image: req.file.filename,
+                date: req.body.date,
+                price: req.body.price
+            });
+    
+            const productos = await db.Productos.findAll();
+    
+            res.render(path.join(__dirname, "../views/products"), { productos, req });
+        } catch (error) {
+            console.error("Error al crear el producto:", error);
+            res.status(500).send("Error interno del servidor");
+        }
+    
     }
     
-
-    // res.render(ruta, { req: req, allProducts: products });
-    // // res.send(products)
 };
 
 module.exports = getAllProducts;
