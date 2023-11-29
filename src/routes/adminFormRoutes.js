@@ -3,6 +3,8 @@ const router = express.Router();
 const multer = require("multer");
 const path = require("path");
 const adminFormController = require("../controllers/adminFormControllers");
+const adminCheck = require("../middlewares/admincheck");
+const getAllProducts = require("../controllers/getAllProducts")
 
 const storage = multer.diskStorage({
     destination:(req, file, cb) => {
@@ -13,13 +15,13 @@ const storage = multer.diskStorage({
     },
 })
 
+
 const uploadBar = multer({storage})
 
 
-
-router.get("/adminform", adminFormController.adminForm);
-router.post("/newproduct", uploadBar.single("image"),adminFormController.addNewProduct )
-
+router.get("/adminform",adminCheck, adminFormController.adminForm);
+//adminCheck,
+router.post("/products", uploadBar.single("image"),getAllProducts.create )
 
 
 

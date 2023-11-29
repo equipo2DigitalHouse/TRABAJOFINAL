@@ -4,23 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="css/carrito.css"> -->
-    <link rel="stylesheet" href="css/homeStyles.css">
+    <link rel="stylesheet" href="css/home_login_error.css">
     <title>Home</title>
 </head>
 <header>
-    <% if(req.session.usuarioLogedo == undefined){ %>
-        <div class="LoginUser">     
-            <form action="/login" method="GET">
-                <label for="Logueate">Regístrate para una mejor atención</label>
-                <button type="button" onclick="window.location.href='/login'">Inicia Sesión o crea tu usuario ahora!</button>
-            </form>
-        </div>
-    <% }else{ %>
-    <div class="nameLoginHome">
-        <h2>Bienvenid@ <%= req.session.usuarioLogedo.fullname %> </h2>
+    <div class="LoginUser">     
+        <form action="/login" method="GET">
+            <label for="Logueate">Regístrate para una mejor atención</label>
+            <button type="button" onclick="window.location.href='/login'">Inicia Sesión o crea tu usuario ahora!</button>
+        </form>
     </div>
-        <% } %>
-
+    
         <div id="contenedorLogoShake">
                     <img id="logoShake" src="/images/jpg/ShakeBatido.jpeg" alt="">
         </div>
@@ -60,8 +54,8 @@
             <h2>No estas conectado</h2>
             <p>Debes iniciar sesión para poder acceder</p>
             <div class="button-pop-up">
-                <button id="close">cerrar</button>
-                <button id="login">iniciar Sesión</button>
+                <button id="close" onclick="window.location.href='/'">cerrar</button>
+                <button id="login" onclick="window.location.href ='/login'">iniciar Sesión</button>
             </div>
         </div>
     </div>
