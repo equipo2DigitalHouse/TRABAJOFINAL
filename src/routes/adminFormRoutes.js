@@ -19,7 +19,7 @@ const storage = multer.diskStorage({
 const uploadBar = multer({storage})
 
 
-router.get("/adminform", adminFormController.adminForm);
+router.get("/adminform",adminCheck, adminFormController.adminForm);
 //adminCheck,
 router.post("/products", uploadBar.single("image"),getAllProducts.create )
 

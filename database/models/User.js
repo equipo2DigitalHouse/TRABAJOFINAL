@@ -20,7 +20,10 @@ module.exports = (sequelize, dataTypes) => {
         },
         password: {
             type: dataTypes.TEXT
-        }, 
+        },
+        isAdmin : {
+            type : dataTypes.STRING
+        }
     };
     let config = {
         tableName: "usuarios",
