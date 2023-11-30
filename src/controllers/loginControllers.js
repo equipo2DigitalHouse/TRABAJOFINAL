@@ -1,46 +1,65 @@
 const db = require("../../database/models");
 const path = require("path");
 const { check, validationResult, body } = require("express-validator");
-const userModule = require("../database/users.json");
 const express = require("express");
 const router = express.Router();
 
 const loginController = {
-    
     login: (req, res) => {
-        res.render(path.join(__dirname, "../views/login"), { errors: [] });;
+        res.render(path.join(__dirname, "../views/login"), { errors: [] });
     },
+
     processLogin: (req, res) => {
-        let errors = validationResult(req);
-        let users = userModule; 
+        const errors = validationResult(req);
 
-        let usuarioALoguearse;
+        if (!errors.isEmpty()) {
+            return res.render(path.join(__dirname, "../views/login"), { errors: errors.array() });
+        }
 
-        if (errors.isEmpty()){
-            for (let i = 0; i < users.length; i++) {
-                if (users[i].email == req.body.email && users[i].password == req.body.password) {
-                    usuarioALoguearse = users[i];
-                    break;
+        const { email, password } = req.body;
+
+        db.Usuarios.findOne({ where: { email, password } })
+
+            .then(usuarioALoguearse => {
+                if (!usuarioALoguearse) {
+                    return res.render(path.join(__dirname, "../views/login"), { errors: [{ msg: "Credenciales inválidas" }] });
+                } else {
+                    req.session.usuarioLogeado = usuarioALoguearse;
+                    res.redirect("/");
                 }
-            }
-        }
-
-
-        if (usuarioALoguearse === undefined) {
-            return res.render(path.join(__dirname, "../views/login"), { errors: [{ msg: "Credenciales inválidas" }] },);
-        } else {
-            req.session.usuarioLogedo = usuarioALoguearse;
-            res.redirect("/"), { errors: errors.array() };
-        }
+            })
+            .catch(error => {
+                console.error('Error en el proceso de inicio de sesión:', error);
+                res.status(500).send('Error interno del servidor');
+            });
     }
-};
 
-// router.get("/check"),(req,res) => {
-//     if(req.session.usuarioLogedo == undefined){
-//         res.send("el usuario no esta logueado")
-//     }else{
-//         res.send("el ususario logueado es "+ req.session.usuarioLogedo.email);
-//     }
-// }
+    
+    //     let users = userModule; 
+    
+    //     let usuarioALoguearse;
+    
+    //     if (errors.isEmpty()){
+        //         for (let i = 0; i < users.length; i++) {
+            //             if (users[i].email == req.body.email && users[i].password == req.body.password) {
+                //                 usuarioALoguearse = users[i];
+                //                 break;
+                //             }
+                //         }
+                //     }
+                
+                
+                //     if (usuarioALoguearse === undefined) {
+                    //         return res.render(path.join(__dirname, "../views/login"), { errors: [{ msg: "Credenciales inválidas" }] },);
+                    //     } else {
+                        //         req.session.usuarioLogedo = usuarioALoguearse;
+                        //         res.redirect("/"), { errors: errors.array() };
+                        //     }
+                        
+                    };
+                        module.exports = loginController;
 
-module.exports = loginController;
+
+
+
+                    
