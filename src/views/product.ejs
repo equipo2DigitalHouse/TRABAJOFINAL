@@ -10,14 +10,14 @@
     <form action="/product/edit/<%= product.id %>?_method=PUT" method="POST">
         <div>
             <label for="">Titulo</label>
-            <input type="text" name="title" id="" value="<%= product.title %>">
+            <input type="text" name="product_name" id="" value="<%= product.product_name %>">
         </div>
         <div>
             <label for="">Precio</label>
             <input type="text" name="price" id="" value="<%= product.price %>">
         </div>
         <div>
-            <label for="">Descripcin</label>
+            <label for="">Descripcion</label>
             <input type="text" name="description" id="" value="<%= product.description %>">
         </div>
         <button type="submit">Confirmar</button>

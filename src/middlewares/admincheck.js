@@ -1,4 +1,4 @@
-const { Usuarios } = require("../../database/models");
+const { Usuarios } = require("../database/models");
 
 const adminCheck = (req, res, next) => {
 

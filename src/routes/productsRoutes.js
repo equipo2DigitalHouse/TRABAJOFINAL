@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const router = express.Router();
 const productsController = require("../controllers/productsControllers");
+const adminCheck = require("../middlewares/admincheck")
 // const session = require('express-session');
 
 const confirmModifyProduct = require("../controllers/confirmModifyProduct");
@@ -15,7 +16,7 @@ router.get("/", productsController.products);
 
 router.get("/products", getAllProducts.list)
 
-router.get("/product/:id",getProductById);
+router.get("/product/:id",adminCheck,getProductById);
 
 router.delete('/product/delete/:id', deleteProduct);
 
