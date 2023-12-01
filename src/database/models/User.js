@@ -22,7 +22,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.TEXT
         },
         isAdmin : {
-            type : dataTypes.STRING
+            type : dataTypes.INTEGER
         }
     };
     let config = {
