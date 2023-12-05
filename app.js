@@ -5,6 +5,7 @@ const PORT= process.env.PORT || 3002
 const methodoverride = require("method-override");
 const morgan = require("morgan");
 const session = require("express-session");
+const dotenv = require("dotenv").config();
 
 app.use(express.static("public"))
 app.use(express.urlencoded({extended:false})) //nos permite capturar la informacion que viene por req.body en controllerRegister
