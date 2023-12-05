@@ -23,7 +23,11 @@ module.exports = (sequelize, dataTypes) => {
         },
         isAdmin : {
             type : dataTypes.INTEGER
+        },
+        avatar : {
+            type: dataTypes.TEXT
         }
+
     };
     let config = {
         tableName: "usuarios",
