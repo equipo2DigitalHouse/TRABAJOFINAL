@@ -18,19 +18,13 @@
                     <div>
                         <p class="fontText">Nombre</p>
                     </div>
-                    <div>
-                        
-                        <input class="loginBar" type="text" name="name" id="" placeholder="Nombre" value="<%= usuarios && usuarios.name ? usuarios.name : '' %>">
-<% if (usuarios && locals.errors && errors.name) { %>
-    <p class="error-message"><%= errors.name.msg %></p>
-<% } %>
-
-
+                    <div> 
+                        <input class="loginBar" type="text" name="name" id="" placeholder="Nombre" >
                     <div>
                         <p class="fontText"> Apellido</p>
                     </div>
                     <div>
-                        <input class="loginBar" type="text" name="last_name" id="" placeholder="Apellido" value="<%= usuarios.last_name %>">
+                        <input class="loginBar" type="text" name="last_name" id="" placeholder="Apellido" >
                         <% if (locals.errors && errors.surname) { %>
                             <p class="error-message"> <%= errors.surname.msg %></p>
                         <% } %>      
@@ -39,7 +33,7 @@
                 <div>
                 <p class="fontText"> Email</p>
                 <div>
-                    <input class="loginBar" type="email" name="email" id="" placeholder="Email" value="<%= usuarios.email %>">
+                    <input class="loginBar" type="email" name="email" id="" placeholder="Email" >
                     <% if (locals.errors && errors.Email) { %>
                         <p class="error-message"> <%= errors.Email.msg %></p>
                     <% } %>   
@@ -48,11 +42,11 @@
                 <div>
                     <p class="fontText"> Nombre de usuario</p>
                 </div>
-                <input class="loginBar" type="text" name="user_name" id="" placeholder="Nombre de Usuario" value="<%= usuarios.user_name %>">
+                <input class="loginBar" type="text" name="user_name" id="" placeholder="Nombre de Usuario" >
                     <% if (locals.errors && errors.userName) { %>
                         <p class="error-message"></p><%= errors.userName.msg %></p>
                     <% } %>   
-                    <input class="loginBar" type="password" name="password" id="" placeholder="Contraseña" value="<%= usuarios.password %>">
+                    <input class="loginBar" type="password" name="password" id="" placeholder="Contraseña" >
                     <% if (locals.errors && errors.password) { %>
                         <p class="error-message"></p><%= errors.password.msg %></p>
                     <% } %> 
@@ -73,7 +67,7 @@
                         <% } %> 
                 </div>
                 <div>
-                    <input class="checkButtom" type="submit" value="Ingresar">
+                    <input class="checkButtom" type="submit" >
                 </div>
                 <div class="ARAR">
                     <p> ¿Ya estás registrado?</p>

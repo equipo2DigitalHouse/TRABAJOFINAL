@@ -1,32 +1,26 @@
 const db = require("../database/models");
 const path = require("path");
 const { validationResult } = require('express-validator');
+const bycrypt = require("bcrypt");
 
 const registerController = {
     register: (req, res) => {
-        const userData = {
-            name: "",
-            last_name: "",
-            email: "",
-            user_name: "",
-        };
-    
-        res.render(path.join(__dirname, "../views/register"), { usuarios: userData });
+        res.render(path.join(__dirname, "../views/register"));
     },
-    
-
     processRegister: function(req, res) {
         if (!req.file || !req.file.filename) {
             console.error("No se ha proporcionado un archivo válido");
             return res.status(400).send("Bad Request");
         }
-    
+
+        const encyptpassword = bycrypt.hashSync(req.body.password, 10);
+        console.log(encyptpassword);
         db.Usuarios.create({
             name: req.body.name,
             last_name: req.body.last_name,
             email: req.body.email,
             user_name: req.body.user_name,
-            password: req.body.password,
+            password: encyptpassword,
             isAdmin: 0,
             avatar: req.file.filename
         })

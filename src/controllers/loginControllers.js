@@ -3,6 +3,7 @@ const path = require("path");
 const { check, validationResult, body } = require("express-validator");
 const express = require("express");
 const router = express.Router();
+const bycrypt = require("bcrypt");
 
 const loginController = {
     login: (req, res) => {
@@ -18,14 +19,21 @@ const loginController = {
 
         const { email, password } = req.body;
 
-        db.Usuarios.findOne({ where: { email, password } })
+        
+
+        db.Usuarios.findOne({ where: { email } })
 
             .then(usuarioALoguearse => {
-                if (!usuarioALoguearse) {
-                    return res.render(path.join(__dirname, "../views/login"), { errors: [{ msg: "Credenciales inválidas" }] });
-                } else {
-                    req.session.usuarioLogeado = usuarioALoguearse;
-                    res.redirect("/");
+                const passWD = bycrypt.compareSync(password, usuarioALoguearse.password)
+                if (passWD){
+                    if (!usuarioALoguearse) {
+                        return res.render(path.join(__dirname, "../views/login"), { errors: [{ msg: "Credenciales inválidas" }] });
+                    } else {
+                        req.session.usuarioLogeado = usuarioALoguearse;
+                        res.redirect("/");
+                    }
+                }else{
+                    res.send("error, credenciales invalidas")
                 }
             })
             .catch(error => {
