@@ -8,17 +8,18 @@
     <title>Home</title>
 </head>
 <header>
-    <% if(req.session.usuarioLogeado == undefined){ %>
+    <% if(req.session.usuarioLogeado == undefined){ %> 
         <div class="LoginUser">     
             <form class ="LoginUserSon" action="/login" method="GET">
                 <label for="Logueate">Regístrate para una mejor atención</label>
-
-                <img class ="DefaultUserPicture" src = "/avatars/DefaultUser1.jpg" alt="Imagen de perfil por defecto">
-                <button type="button" onclick="window.location.href='/login'">Inicia Sesión o crea tu usuario!</button>
-
+                <div class="DefaultUserPictureContainer">
+                 <img class ="DefaultUserPicture" src = "/avatars/DefaultUser1.jpg" alt="Imagen de perfil por defecto">
+                </div>
+                <div class="DefaultUserPictureContainer">
+                <div>  </div>
+                    <button type="button" onclick="window.location.href='/login'">Inicia Sesión o crea tu usuario!</button>
+                </div>
             </form>
-            
-
         </div>
     <% }else{ %>
     <div class="nameLoginHome">
@@ -27,9 +28,7 @@
             <form class ="LoginUserSon" action="/login" method="GET">
                 <label for="Logueate">Regístrate para una mejor atención</label>
                 <div class="DefaultUserPictureContainer">
-
                     <img class="DefaultUserPicture" src="<%= req.session.usuarioLogeado && req.session.usuarioLogeado.avatar ? '/images/avatars/' + req.session.usuarioLogeado.avatar : '/images/avatars/DefaultUser1.jpg' %>" alt="Imagen de perfil del usuario"></div>
-
                 <button type="button" onclick="window.location.href='/login'">Bienvenid@ <%= req.session.usuarioLogeado.name %>!</button>
 
             </form>
