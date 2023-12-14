@@ -30,6 +30,7 @@ const loginController = {
                         return res.render(path.join(__dirname, "../views/login"), { errors: [{ msg: "Credenciales inválidas" }] });
                     } else {
                         req.session.usuarioLogeado = usuarioALoguearse;
+                    
                         res.redirect("/");
                     }
                 }else{
