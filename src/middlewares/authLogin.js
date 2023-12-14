@@ -1,15 +1,16 @@
-
+const { Usuarios } = require("../database/models");
 
 const authLogin = (req,res,next) => {
 
-    const express = require('express');
-    const app = express();
-    
-    if(req.session.usuarioLogedo == undefined){
-        res.redirect("../home_login_error")
-    }else{
+
+    if (req.session.usuarioLogeado == undefined) {
+        res.redirect("../home_login_error");
+    } else {
+        console.log(req.session.usuarioLogeado)
         next();
     }
+
+
 };
 
 
