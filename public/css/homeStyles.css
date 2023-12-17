@@ -94,7 +94,13 @@ header{
     align-items: center;
 
 }
-
+.submit{
+    text-align: center;
+}
+.loggedName{
+    background-color: #a11791;
+    text-align: center;
+}
 #search-form {
     position: absolute;
     top: 50px; 

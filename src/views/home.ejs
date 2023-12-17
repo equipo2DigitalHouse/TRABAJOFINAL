@@ -22,21 +22,24 @@
             </form>
         </div>
     <% }else{ %>
-    <div class="nameLoginHome">
-        <h2>Bienvenid@  <%= req.session.usuarioLogeado.name %> </h2>
-        <div class="LoginUser">     
-            <form class ="LoginUserSon" action="/login" method="GET">
-                <label for="Logueate">Regístrate para una mejor atención</label>
-                <div class="DefaultUserPictureContainer">
-                    <img class="DefaultUserPicture" src="<%= req.session.usuarioLogeado && req.session.usuarioLogeado.avatar ? '/images/avatars/' + req.session.usuarioLogeado.avatar : '/images/avatars/DefaultUser1.jpg' %>" alt="Imagen de perfil del usuario"></div>
-                <button type="button" onclick="window.location.href='/login'">Bienvenid@ <%= req.session.usuarioLogeado.name %>!</button>
-
-            </form>
-            
-
+        <div class="nameLoginHome">
+            <h2>Bienvenid@ <%= req.session.usuarioLogeado.name %> </h2>
+            <div class="LoginUser">     
+                <form class="LoginUserSon" action="/logout" method="POST"> 
+                    <label for="Logueate">Bienvenid@ <%= req.session.usuarioLogeado.name %>!</label>
+                    <div class="DefaultUserPictureContainer">
+                        <img class="DefaultUserPicture" src="<%= req.session.usuarioLogeado && req.session.usuarioLogeado.avatar ? '/images/avatars/' + req.session.usuarioLogeado.avatar : '/images/avatars/DefaultUser1.jpg' %>" alt="Imagen de perfil del usuario">
+                    </div>
+                    <div class="DefaultUserPictureContainer ">
+                        <button type="submit">Cerrar sesión</button> 
+                        <!-- ver el tema de boton de cerrar sesion -->
+                    </div>
+        
+                </form>
+            </div>
         </div>
-    </div>
         <% } %>
+        
 
         <div id="contenedorLogoShake">
                     <img id="logoShake" src="/images/jpg/ShakeBatido.jpeg" alt="">
