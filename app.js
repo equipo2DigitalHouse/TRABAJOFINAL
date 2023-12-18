@@ -37,6 +37,7 @@ app.listen(PORT , () =>
 console.log(`Servidor escuchando en puerto ${PORT}`));
 
 app.use(session({ secret: "Secreto" }));
+app.use('/avatars', express.static(path.join(__dirname, 'public/images/avatars/default')));
 
 app.use(adminFormRoutes);
 app.use(contactsRoutes);
