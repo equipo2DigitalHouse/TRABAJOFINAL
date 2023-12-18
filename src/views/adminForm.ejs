@@ -18,14 +18,15 @@
                 </h2>
                 <div>
                     <div>
-                        <input class="loginBar" type="text" name="product_name" id="" placeholder=" Nombre de Producto" required>
+                        <input class="loginBar" type="text" name="product_name" id="" placeholder=" Nombre de Producto" minlength="5" required>
                     </div>
                     <div>
-                        <input class="loginBar" type="text" name="description" id="" placeholder="Descripción" required>
+                        <input class="loginBar" type="text" name="description" id="" placeholder="Descripción" minlength="20" required>
                     </div>
                     <div class="adminFile">
                         <p>Imagen del Producto</p>
-                        <input class="loginBar" type="file" name="image" accept="image/*" required style="padding: 4px 0 0 10px;">
+                        <input class="loginBar" type="file" name="image" accept="image/*, .jpg, .jpeg, .png, .gif" id="product_img" required style="padding: 4px 0 0 10px;">
+                        <p id="error-message" class="error-message" style="display: none;">Por favor, selecciona un archivo de imagen válido (JPG, JPEG, PNG o GIF).</p>
                     </div>
                     <!-- <div>
                         <input class="loginBar" type="text" name="barType" id="" placeholder="Tipo de Barra" required>
@@ -52,5 +53,6 @@
     <footer>
         
     </footer>
+    <script src="/scripts/fileTypeValidation.js" ></script>
 </body>
 </html>
