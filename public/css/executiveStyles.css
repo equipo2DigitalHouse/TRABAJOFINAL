@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.imgContainer {
+    margin: 1px solid black; /* Ajusta las unidades y el estilo del borde */
+}
+
+.imgContainer img {
+    width: 100px; /* Ancho deseado */
+    height: 80px; /* Alto deseado */
+}
+
+.search-bar {
+    width: 200px; /* Puedes ajustar el ancho según tus necesidades */
+    margin: 10px; /* Puedes ajustar el margen según tus necesidades */
+    display: flex;
+    height: 40px;
+}
+
+input[type="search"] {
+    width: 80%; /* Ajusta el ancho del campo de búsqueda según tus necesidades */
+    padding: 5px; /* Ajusta el relleno según tus necesidades */
+    height: 40px;
+}
+
+button {
+    padding: 3.5px 7px;
+}
+
+.Container1 {
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid pink;
+}
+
+.contenedorCarrousel {
+    width: 300px; /* Ajusta el ancho según tus necesidades */
+    overflow: hidden;
+    margin: 0 auto; /* Centra el carrusel */
+    animation: carrusel 10s infinite; /* Controla la velocidad de la animación */
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
