@@ -23,7 +23,6 @@
         </div>
     <% }else{ %>
         <div class="nameLoginHome">
-            <h2>Bienvenid@ <%= req.session.usuarioLogeado.name %> </h2>
             <div class="LoginUser">     
                 <form class="LoginUserSon" action="/logout" method="POST"> 
                     <label for="Logueate">Bienvenid@ <%= req.session.usuarioLogeado.name %>!</label>

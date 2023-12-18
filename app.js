@@ -31,7 +31,8 @@ const productsRoutes = require("./src/routes/productsRoutes");
 const registerRoutes = require("./src/routes/registerRoutes");
 const contactsRoutes = require("./src/routes/contactsRoutes");
 const cookies = require("./src/routes/cookies");
-const users = require("./src/routes/usersRoutes")
+const users = require("./src/routes/usersRoutes");
+const executive=require ("./src/routes/executiveRoutes")
 
 app.listen(PORT , () =>
 console.log(`Servidor escuchando en puerto ${PORT}`));
@@ -49,6 +50,8 @@ app.use(productsRoutes);
 app.use(registerRoutes);
 app.use(cookies);
 app.use(users);
+app.use(executive);
+
 
 
 app.use((req,res,next)=>{
