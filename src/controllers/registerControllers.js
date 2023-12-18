@@ -1,38 +1,45 @@
 const db = require("../database/models");
 const path = require("path");
 const { validationResult } = require('express-validator');
-const bycrypt = require("bcrypt");
+const bcrypt = require("bcrypt");
+
+const defaultAvatarPath = path.join(__dirname, "../../public/images/avatars/default/DefaultUser1.jpg");
+ 
 
 const registerController = {
     register: (req, res) => {
         res.render(path.join(__dirname, "../views/register"));
     },
-    processRegister: function(req, res) {
-        if (!req.file || !req.file.filename) {
-            console.error("No se ha proporcionado un archivo válido");
-            return res.status(400).send("Bad Request");
-        }
 
-        const encyptpassword = bycrypt.hashSync(req.body.password, 10);
-        console.log(encyptpassword);
-        db.Usuarios.create({
-            name: req.body.name,
-            last_name: req.body.last_name,
-            email: req.body.email,
-            user_name: req.body.user_name,
-            password: encyptpassword,
-            isAdmin: 0,
-            avatar: req.file.filename
-        })
-        .then(result => {
+    processRegister: async function(req, res) {
+        try {
+            let avatarPath;
+
+                if (req.file && req.file.filename) {
+                    avatarPath = req.file.filename;
+                } else {
+                    avatarPath = "/default/DefaultUser1.jpg";
+                }
+
+
+            const encryptedPassword = bcrypt.hashSync(req.body.password, 10);
+
+            await db.Usuarios.create({
+                name: req.body.name,
+                last_name: req.body.last_name,
+                email: req.body.email,
+                user_name: req.body.user_name,
+                password: encryptedPassword,
+                isAdmin: 0,
+                avatar: avatarPath
+            });
+
             res.redirect("/login");
-        })
-        .catch(error => {
+        } catch (error) {
             console.error("Error al crear el usuario:", error);
             res.status(500).send("Error interno del servidor");
-        });
+        }
     },
-    
 
     login: (req, res) => {
         res.render('login');
@@ -41,9 +48,10 @@ const registerController = {
     profile: (req, res) => {
         res.render('home');
     },
-}
+};
 
 module.exports = registerController;
+
 
 
 
