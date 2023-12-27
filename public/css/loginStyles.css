@@ -9,7 +9,7 @@ background-image: url(/images/jpg/wepik-export-202308260528110Mst.png);
 
 .formLogin{
     width: 400px;
-    height: 340px;
+    height: 100%;
     background-color: #663399;
     margin: auto;
     margin-top: 180px;
@@ -60,6 +60,24 @@ background-image: url(/images/jpg/wepik-export-202308260528110Mst.png);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
  }
+
+ .errors-message{
+    display: flex;
+    height: 35px;
+  background-color: #fce4e496;
+  border: 1px solid #fcc2c3;
+  color: #cc0033;
+  text-shadow: 1px 1px rgba(250,250,250,.3);
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  justify-content: center;
+  align-items: center;
+ }
+ 
  
  .forgotPswd a:hover{
     text-decoration: underline;
