@@ -169,6 +169,8 @@ img {
 h2 {
     margin-bottom: 10px; /* Puedes ajustar el margen inferior del encabezado según tus preferencias */
     color: goldenrod;
+    font-style: italic;
+    text-decoration: underline;
 }
 h1 { 
     color: #f9f9f9;
@@ -188,10 +190,14 @@ h1 {
 #mensajeContainer {
     margin-top: 20px;
     padding: 10px;
+    background-color: #ccc;
+    opacity: 0.9;
     border: 1px solid #ccc;
     border-radius: 5px;
     color: black;
-    display: inline-block; /* Alinea el mensaje como un bloque en línea */
+    display: flex; /* Utiliza flex en lugar de inline-table */
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 label{
     color:antiquewhite
@@ -201,11 +207,17 @@ label{
     background-color: #f0f0f0; /* Cambia el color de fondo del select */
     border: 1px solid #ccc; /* Agrega un borde al select */
     padding: 5px; /* Añade un espacio interno alrededor del contenido del select */
+
+}
+.famousOpinionForm label{
+    color: black;
+    font-size: larger;
 }
 
 #nombreFamoso option {
     color: blue; /* Cambia el color del texto de las opciones */
     background-color: #e0e0e0; /* Cambia el color de fondo de las opciones */
+    font-size: x-large;
 }
 #imagenFamoso {
     max-width: 100%;
@@ -228,6 +240,8 @@ label{
     justify-content: center;
     text-align: center;
     font-size: larger;
+    opacity: 0.8;
+    background-color: #e0e0e0;
 }
 /* Define la animación */
 @keyframes carrusel {

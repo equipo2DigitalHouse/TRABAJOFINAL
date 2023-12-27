@@ -11,13 +11,11 @@
 </header>
 <body>
     <div class="Container1">
-        <div class="imgContainer"> 
-            <img src="images/jpg/shake it up logo.jpg" alt="">
-        </div>
-        <form class="search-bar">
-            <input type="search" placeholder="Buscar...">
-                <button type="submit">Buscar</button>
-        </form>
+        <a href="/">
+            <div class="imgContainer"> 
+                <img src="images/jpg/shake it up logo.jpg" alt="Logo de Shake it Up">
+            </div>
+        </a>
     <div>
 </div>
     </div>
@@ -70,14 +68,15 @@
         var mensajeFamoso = document.getElementById("mensajeFamoso");
         var mensajeContainer = document.getElementById("mensajeContainer");
 
+
         // Oculta el contenedor si no hay famoso seleccionado
         if (nombreFamosoSeleccionado === "") {
-            mensajeContainer.style.display = "none";
-            return;
-        }
+        mensajeContainer.style.display = "none";
+        return;
+    }
 
         // Muestra el contenedor
-        mensajeContainer.style.display = "block";
+        mensajeContainer.style.display = "flex"; // Cambia "block" por "flex"
 
         // Asigna la imagen correspondiente al famoso
         imagenFamoso.src = "images/jpg/carrouselPictures/" + nombreFamosoSeleccionado + ".jpeg";
