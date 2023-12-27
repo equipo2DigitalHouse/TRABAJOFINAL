@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/executiveStyles.css">
+    <title>Eventos by Shake it Up!</title>
+</head>
+<header> 
+    <h3>Eventos by Shake it Up!</h3> 
+</header>
+<body>
+    <div class="Container1">
+        <a href="/">
+            <div class="imgContainer"> 
+                <img src="images/jpg/shake it up logo.jpg" alt="Logo de Shake it Up">
+            </div>
+        </a>
+    <div>
+</div>
+    </div>
+    <h1 class="title">Ellos, ya lo hicieron. Vos también podés elegir Shake it Up! </h1>
+    <div class="contenedorCarrousel" id="carrouselContainer">
+        <ul>
+            <li class="slide"><img src="images\jpg\carrouselPictures\Nico-Vazquez.jpg" alt=""></li>
+            <li class="slide"><img src="images\jpg\carrouselPictures\cristian castro.png" alt=""></li>
+            <li class="slide"><img src="images\jpg\carrouselPictures\MartinBossi.png" alt=""></li>
+            <li class="slide"><img src="images\jpg\carrouselPictures\veronjpg.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+<div class="divisorGeneral"> 
+        <div class="TextDivisor"> <h2>~PROPUESTA PERSONALIZADA~</h2> 
+            Realizamos una propuesta totalmente personalizada y ajustada a cualquier presupuesto para que quienes estén interesados puedan contratar nuestros servicios.
+            Seré tu socia, asesora y representante, negociando y/o intermediando con los proveedores para poder conseguir una disminución considerable en el presupuesto inicial.
+            Imaginalo, contalo…. disfrutalo!
+        </div>
+        <div class="TextDivisor"><h2> ~DISEÑAMOS TU EVENTO~</h2>
+            Shake It Up! pone a tu alcance un equipo de profesionales creativos con el único objetivo de diseñar y organizar eventos inolvidables que superen tus expectativas. Nuestro equipo está formado por expertos apasionados en diferentes áreas, como diseño, logística, producción y coordinación, todos trabajando en armonía para garantizar que tu evento sea un éxito.
+        </div>      
+</div>
+<div class="title-img-container">
+    <h1>¿Querés saber qué dicen las celebridades de nosotros? Clickeá acá</h1>
+    <img src="images/jpg/arrow.png" alt="">
+
+</div>
+<form class="famousOpinionForm">
+    <label for="nombreFamoso">Selecciona un famoso:</label>
+    <select id="nombreFamoso" name="nombreFamoso">
+        <option value="JuanSebastianVeron">Juan Sebastián Verón</option>
+        <option value="MartinBossi">Martín Bossi</option>
+        <option value="NicoVazquez">Nico Vázquez</option>
+        <option value="CristianCastro">Cristian Castro</option>
+    </select>
+    <button type="button" onclick="mostrarMensaje()">Mostrar Mensaje</button>
+</form>
+
+<!-- Contenedor para mostrar la imagen y el mensaje -->
+<div id="mensajeContainer" style="display: none;">
+    <img id="imagenFamoso" src="" alt="Imagen del famoso">
+    <p id="mensajeFamoso"></p>
+</div>
+
+<script>
+    function mostrarMensaje() {
+        var nombreFamosoSeleccionado = document.getElementById("nombreFamoso").value;
+        var imagenFamoso = document.getElementById("imagenFamoso");
+        var mensajeFamoso = document.getElementById("mensajeFamoso");
+        var mensajeContainer = document.getElementById("mensajeContainer");
+
+
+        // Oculta el contenedor si no hay famoso seleccionado
+        if (nombreFamosoSeleccionado === "") {
+        mensajeContainer.style.display = "none";
+        return;
+    }
+
+        // Muestra el contenedor
+        mensajeContainer.style.display = "flex"; // Cambia "block" por "flex"
+
+        // Asigna la imagen correspondiente al famoso
+        imagenFamoso.src = "images/jpg/carrouselPictures/" + nombreFamosoSeleccionado + ".jpeg";
+
+        // Mensaje personalizado para cada famoso
+        var mensaje = "";
+        switch (nombreFamosoSeleccionado) {
+            case "JuanSebastianVeron":
+                mensaje = "Juan Sebastián Verón dijo: 'El evento estuvo increíble. La próxima los llamo para organizarlo en el Estadio Único de La Plata o en Old Trafford'";
+                break;
+            case "MartinBossi":
+                mensaje = "Martín Bossi dijo: 'Muy lindo todo. Voy a llamarlos para que sirvan tragos con Tinelli en Showmatch.'";
+                break;
+            case "NicoVazquez":
+                mensaje = "Nico Vázquez dijo: 'Gime y yo lo disfrutamos mucho'.";
+                break;
+            case "CristianCastro":
+                mensaje = "Cristian Castro dijo: 'Voy a organizar mi cumpleaños siempre con SHAKE IT UP! ¿Pueden ir a Mexico?'";
+                break;
+            default:
+                mensaje = "Texto predeterminado.";
+                break;
+        }
+
+        // Asigna el mensaje al contenedor
+        mensajeFamoso.textContent = mensaje;
+    }
+</script>
+
+</html>
