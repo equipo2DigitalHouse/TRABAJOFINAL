@@ -35,13 +35,8 @@ const registerRoutes = require("./src/routes/registerRoutes");
 const contactsRoutes = require("./src/routes/contactsRoutes");
 const cookies = require("./src/routes/cookies");
 const users = require("./src/routes/usersRoutes")
-<<<<<<< HEAD
-const apirouterproduct = require ('./src/routes/api/apiProducts')
-
-=======
 const shop = require("./src/routes/shopRoutes")
 const executive = require("./src/routes/executiveRoutes")
->>>>>>> 07b629e9cc1c9160b335aeca73c5c76d5c035f1b
 app.listen(PORT , () =>
 console.log(`Servidor escuchando en puerto ${PORT}`));
 
@@ -58,13 +53,8 @@ app.use(productsRoutes);
 app.use(registerRoutes);
 app.use(cookies);
 app.use(users);
-<<<<<<< HEAD
-app.use('/api', apirouterproduct)
-
-=======
 app.use(shop);
 app.use(executive)
->>>>>>> 07b629e9cc1c9160b335aeca73c5c76d5c035f1b
 
 app.use((req,res,next)=>{
     res.status(404).render(path.join(__dirname,"./src/views/not-found"));
