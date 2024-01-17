@@ -33,7 +33,8 @@ const getAllProducts = {
             res.status(500).send("Error interno del servidor");
         });
     },
-    
 };
+
+
 
 module.exports = getAllProducts;
