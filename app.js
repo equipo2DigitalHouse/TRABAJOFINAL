@@ -34,9 +34,11 @@ const productsRoutes = require("./src/routes/productsRoutes");
 const registerRoutes = require("./src/routes/registerRoutes");
 const contactsRoutes = require("./src/routes/contactsRoutes");
 const cookies = require("./src/routes/cookies");
-const users = require("./src/routes/usersRoutes")
-const shop = require("./src/routes/shopRoutes")
-const executive = require("./src/routes/executiveRoutes")
+const users = require("./src/routes/usersRoutes");
+const shop = require("./src/routes/shopRoutes");
+const executive = require("./src/routes/executiveRoutes");
+const apiProducts = require("./src/routes/api/apiProducts");
+const apiusers = require("./src/routes/api/apiUsers");
 app.listen(PORT , () =>
 console.log(`Servidor escuchando en puerto ${PORT}`));
 
@@ -55,6 +57,8 @@ app.use(cookies);
 app.use(users);
 app.use(shop);
 app.use(executive)
+app.use('/api', apiProducts)
+app.use("/api", apiusers)
 
 app.use((req,res,next)=>{
     res.status(404).render(path.join(__dirname,"./src/views/not-found"));
