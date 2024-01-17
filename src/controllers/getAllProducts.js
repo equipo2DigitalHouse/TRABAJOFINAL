@@ -1,4 +1,5 @@
 const db = require("../database/models");
+const Op = db.Sequelize.Op
 const path = require('path');
 
 const getAllProducts = {
@@ -31,7 +32,9 @@ const getAllProducts = {
             console.error("Error al crear el producto:", error);
             res.status(500).send("Error interno del servidor");
         });
-    }
+    },
 };
+
+
 
 module.exports = getAllProducts;
