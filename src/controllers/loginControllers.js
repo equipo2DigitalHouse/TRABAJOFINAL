@@ -19,22 +19,19 @@ const loginController = {
 
         const { email, password } = req.body;
 
-        
-
         db.Usuarios.findOne({ where: { email } })
-
             .then(usuarioALoguearse => {
-                const passWD = bycrypt.compareSync(password, usuarioALoguearse.password)
-                if (passWD){
-                    if (!usuarioALoguearse) {
-                        return res.render(path.join(__dirname, "../views/login"), { errors: [{ msg: "Credenciales inválidas" }] });
-                    } else {
-                        req.session.usuarioLogeado = usuarioALoguearse;
-                    
-                        res.redirect("/");
-                    }
-                }else{
-                    res.send("error, credenciales invalidas")
+                if (!usuarioALoguearse) {
+                    return res.render(path.join(__dirname, "../views/login"), { errors: [{ msg: "Credenciales inválidas" }] });
+                }
+
+                const passWD = bycrypt.compareSync(password, usuarioALoguearse.password);
+
+                if (passWD) {
+                    req.session.usuarioLogeado = usuarioALoguearse;
+                    res.redirect("/");
+                } else {
+                    return res.render(path.join(__dirname, "../views/login"), { errors: [{ msg: "Credenciales inválidas" }] });
                 }
             })
             .catch(error => {
@@ -42,6 +39,11 @@ const loginController = {
                 res.status(500).send('Error interno del servidor');
             });
     }
+};
+
+module.exports = loginController;
+
+
 
     
     //     let users = userModule; 
@@ -65,8 +67,7 @@ const loginController = {
                         //         res.redirect("/"), { errors: errors.array() };
                         //     }
                         
-                    };
-                        module.exports = loginController;
+                    
 
 
 

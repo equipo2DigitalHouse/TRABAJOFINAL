@@ -11,16 +11,6 @@
         
     </header>
     <main>
-        <% if (errors && errors.length > 0) { %> 
-            <p style="color: red;">ERROR</p>
-            <ul>
-                <% for (let i = 0; i < errors.length; i++) { %>
-                <li>
-                    <%= errors[i].msg %>
-                </li>
-                <% } %>
-            </ul>
-        <% } %>
 
         <form method="POST">  
             <div class="formLogin">
@@ -28,6 +18,17 @@
                     Formulario Login
                 </h2>
                 <div>
+                    <% if (errors && errors.length > 0) { %>
+                        <div class="errors-message">
+                            <ul>
+                                <% for (let i = 0; i < errors.length; i++) { %>
+                                    <li style="list-style: none;">
+                                        <%= errors[i].msg %>
+                                    </li>
+                                    <% } %>
+                            </ul>
+                        </div>
+                    <% } %>
                     <div>
                         <input class="loginBar" type="text" name="email" id="" placeholder=" E-mail" required>
                     </div>

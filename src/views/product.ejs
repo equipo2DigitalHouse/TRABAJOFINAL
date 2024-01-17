@@ -13,14 +13,22 @@
             <input type="text" name="product_name" id="" value="<%= product.product_name %>">
         </div>
         <div>
+        <label for="productName">Nombre:</label>
+    <input type="text" id="productName" required minlength="5">
+        </div>
+        <div>
             <label for="">Precio</label>
             <input type="text" name="price" id="" value="<%= product.price %>">
         </div>
         <div>
-            <label for="">Descripcion</label>
-            <input type="text" name="description" id="" value="<%= product.description %>">
+            <label for="productDescription">Descripción:</label>
+            <textarea id="productDescription" required minlength="20"></textarea>
         </div>
-        <button type="submit">Confirmar</button>
+        <div>
+            <label for="productImage">Imagen:</label>
+    <input type="file" id="productImage" accept="image/jpeg, image/png, image/gif">
+        </div>
+        <button type="submit">Guardar Producto</button>
     </form>
 </body>
 </html>
