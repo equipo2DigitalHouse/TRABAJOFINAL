@@ -3,7 +3,7 @@ const router = express.Router();
 const apiUsersControllers = require('../../controllers/api/apiUsersControllers');
 
 //Todos los productos//
-router.get('/users', apiUsersControllers.index);
+router.get('/', apiUsersControllers.index);
 
 
 //Detalle de producto//
