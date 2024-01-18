@@ -1,11 +1,12 @@
-const moment = require("moment");
-const { User, userCategory } = require("../../database/models");
+// const moment = require("moment");
+const {Usuarios} = require("../../database/models");
+const {op} = require('sequelize');
 
 module.exports = {
-    /*listado de usuarios para admins */
-    list: async (req, res) => {
+    /*listado de usuarios para adminis */
+    index: async (req, res) => {
         try {
-          const users = await User.findAll({ include: { all: true } });
+          const users = await Usuarios.findAll();
 
             if (users.length > 0) {
               let results = {

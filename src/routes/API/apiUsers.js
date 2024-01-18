@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const apiUsersControllers = require('../controllers/api/apiUsersControllers');
+const apiUsersControllers = require('../../controllers/api/apiUsersControllers');
 
 //Todos los productos//
-router.get('/', apiUsersControllers.list);
+router.get('/', apiUsersControllers.index);
 
 
 //Detalle de producto//
