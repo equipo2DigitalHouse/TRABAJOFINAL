@@ -3,6 +3,7 @@ const {Usuarios} = require("../../database/models");
 const {op} = require('sequelize');
 
 module.exports = {
+  
     /*listado de usuarios para adminis */
     index: async (req, res) => {
         try {
@@ -10,8 +11,8 @@ module.exports = {
 
             if (users.length > 0) {
               let results = {
-                metadata: {
-                  status: 200,
+                count: {
+                  // status: 200,
                   quantity: users.length
                 },
                 data: { users }
