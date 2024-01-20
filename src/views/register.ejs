@@ -1,89 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <link rel="stylesheet" href="/css/registerStyles.css">
+    <title>Documento</title>
+    <link rel="stylesheet" href="/css/registerStyles.css">
 </head>
 <body>
     <header>
         
     </header>
-    <main >  
+    <main>  
         <form method="post" action="/register" enctype="multipart/form-data">
             <div class="formLogin">
-                <h2>Registrate en nuestra app</h2>
+                <h2>Regístrate en nuestra aplicación</h2>
                 <div>
                     <div>
                         <p class="fontText">Nombre</p>
                     </div>
-                    <div>
-                        <input class="loginBar <%= locals.errors && errors.name ? 'is-invalid' : '' %>" type="text" name="name" id="" placeholder="Nombre" value="<%= locals.oldData ? oldData.name : '' %>">
-                        <% if (locals.errors && errors.name) { %>
-                            <p class="error-message"><%= errors.name.msg %></p>
-                        <% } %>
-                    <div>
-                        <p class="fontText"> Apellido</p>
+                    <div> 
+                        <input class="loginBar" type="text" name="name" id="" placeholder="Nombre" minlength="2" required>
                     </div>
                     <div>
-                        <input class="loginBar <%= locals.errors && errors.surname ? 'is-invalid' : '' %>" type="text" name="surname" id="" placeholder="Apellido" value="<%= locals.oldData ? oldData.surname : '' %>">
+                        <p class="fontText">Apellido</p>
+                    </div>
+                    <div>
+                        <input class="loginBar" type="text" name="last_name" id="" placeholder="Apellido" minlength="2" required>
                         <% if (locals.errors && errors.surname) { %>
                             <p class="error-message"> <%= errors.surname.msg %></p>
                         <% } %>      
-                </div>
-                </div>
-                <div>
-                <p class="fontText"> Email</p>
-                <div>
-                    <input class="loginBar<%= locals.errors && errors.Email ? 'is-invalid' : '' %>" type="email" name="Email" id="" placeholder="Email" value="<%= locals.oldData ? oldData.Email : '' %>">
-                    <% if (locals.errors && errors.Email) { %>
-                        <p class="error-message"> <%= errors.Email.msg %></p>
-                    <% } %>   
-                </div>
+                    </div>
                 </div>
                 <div>
-                    <p class="fontText"> Nombre de usuario</p>
-                </div>
-                <input class="loginBar<%= locals.errors && errors.userName ? 'is-invalid' : '' %>" type="text" name="userName" id="" placeholder="Nombre de Usuario" value="<%= locals.oldData ? oldData.userName : '' %>">
-                    <% if (locals.errors && errors.userName) { %>
-                        <p class="error-message"></p><%= errors.userName.msg %></p>
-                    <% } %>   
-                    <input class="loginBar<%= locals.errors && errors.password ? 'is-invalid' : '' %>" type="password" name="password" id="" placeholder="Contraseña" value="<%= locals.oldData ? oldData.password : '' %>">
-                    <% if (locals.errors && errors.password) { %>
-                        <p class="error-message"></p><%= errors.password.msg %></p>
-                    <% } %> 
-                </div>
-                <!-- <div>
+                    <p class="fontText">Email</p>
                     <div>
-                        <p class="fontText">Repite tu contraseña</p>
+                        <input class="loginBar" type="email" name="email" id="" placeholder="Email" required>
+                        <% if (locals.errors && errors.Email) { %>
+                            <p class="error-message"> <%= errors.Email.msg %></p>
+                        <% } %>   
                     </div>
-                    <input class="loginBar" type="password" name="rptPassword" id="" placeholder="Repetir Contraseña" >
-                                 <p class="error-message"></p>
-                    </div>
-                <div> -->
-                    <label  class="fontText" for="avatar">Sube tu imagen de perfil:</label>
-                    <input class="fontText" type="file"  name="avatar" >
-                        <% if (locals.errors && errors.avatar) { %>
-                            <p class="error-message">
-                            <%= errors.avatar.msg %>
-                        <% } %> 
                 </div>
                 <div>
-                    <input class="checkButtom" type="submit" value="Ingresar">
+                    <p class="fontText">Nombre de usuario</p>
+                    <div>
+                        <input class="loginBar" type="text" name="user_name" id="" placeholder="Nombre de Usuario" required >
+                        <% if (locals.errors && errors.userName) { %>
+                            <p class="error-message"><%= errors.userName.msg %></p>
+                        <% } %>   
+                    </div>
+                    <div>
+                        <p class="fontText">Contraseña</p>
+                    </div>
+                    <div>
+                        <input class="loginBar" type="password" name="password" id="" placeholder="Contraseña" minlength="8" required >
+                        <% if (locals.errors && errors.password) { %>
+                            <p class="error-message"><%= errors.password.msg %></p>
+                        <% } %> 
+                    </div>
+                </div>
+                <div>
+                    <label class="fontText" for="avatar">Sube tu imagen de perfil:</label>
+                    <input class="fontText" type="file" name="avatar" id="img_validation" accept=".jpg, .jpeg, .png, .gif">
+                    <p id="error-message" class="error-message" style="display: none;">Por favor, selecciona un archivo de imagen válido (JPG, JPEG, PNG o GIF).</p>
+                </div>
+                
+                
+                
+                <div>
+                    <input class="checkButtom" type="submit">
                 </div>
                 <div class="ARAR">
-                    <p> ¿Ya estás registrado?</p>
+                    <p>¿Ya estás registrado?</p>
                 </div>
                 <div class="log_in">
                     <p><a href="/login">Inicia sesión aquí</a></p>
                 </div>
             </div>
-        </div>
-    </form>
+        </form>
     </main>
     <footer>
         
     </footer>
+    <script src="/scripts/fileTypeValidation.js"></script>
 </body>
 </html>

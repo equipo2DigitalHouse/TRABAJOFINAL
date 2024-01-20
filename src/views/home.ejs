@@ -8,18 +8,41 @@
     <title>Home</title>
 </head>
 <header>
-    <div class="LoginUser">     
-        <form action="/login" method="GET">
-            <label for="Logueate">Regístrate para una mejor atención</label>
-            <button type="button" onclick="window.location.href='/login'">Inicia Sesión o crea tu usuario ahora!</button>
-        </form>
+    <% if(req.session.usuarioLogeado == undefined){ %> 
+        <div class="LoginUser">     
+            <form class ="LoginUserSon" action="/login" method="GET">
+                <label for="Logueate">Regístrate para una mejor atención</label>
+                <div class="DefaultUserPictureContainer">
+                 <img class ="DefaultUserPicture" src = "/avatars/DefaultUser1.jpg" alt="Imagen de perfil por defecto">
+                </div>
+                <div class="DefaultUserPictureContainer">
+                <div>  </div>
+                    <button type="button" onclick="window.location.href='/login'">Inicia Sesión o crea tu usuario!</button>
+                </div>
+            </form>
+        </div>
+    <% }else{ %>
+    <div class="nameLoginHome">
+        <h2>Bienvenid@  <%= req.session.usuarioLogeado.name %> </h2>
+        <div class="LoginUser">     
+            <form class ="LoginUserSon" action="/login" method="GET">
+                <label for="Logueate">Regístrate para una mejor atención</label>
+                <div class="DefaultUserPictureContainer">
+                    <img class="DefaultUserPicture" src="<%= req.session.usuarioLogeado && req.session.usuarioLogeado.avatar ? '/images/avatars/' + req.session.usuarioLogeado.avatar : '/images/avatars/DefaultUser1.jpg' %>" alt="Imagen de perfil del usuario"></div>
+                <button type="button" onclick="window.location.href='/login'">Bienvenid@ <%= req.session.usuarioLogeado.name %>!</button>
+
+            </form>
+            
+
+        </div>
     </div>
-    
+        <% } %>
+
         <div id="contenedorLogoShake">
                     <img id="logoShake" src="/images/jpg/ShakeBatido.jpeg" alt="">
         </div>
-        <div class="logoCarrito">
-            <a href="/list">
+        <div class="logoCarrito" id="logoCarrito">
+            <a href="/shop">
                 <img src="/images/svg/carrito.svg" alt="">
             </a>
             <div class="Carro">
@@ -30,15 +53,15 @@
 <body>
     <nav class="navBar">
         <ol>
-            <li><a href="">Inicio</a></li>
+            <!-- <li><a href="">Inicio</a></li> -->
             <li class="dropdown">
                 <a href="#">Quienes nos eligen <img class="icono" src="/images/svg/star-regular.svg" alt="" ></a>
                 <div class="dropdown-content">
-                    <a href="#">Fotos de eventos ejecutivos</a>
-                    <a href="#">Fotos de eventos sociales famosos que nos eligen</a>
+                    <a href="/executive">Fotos de eventos ejecutivos</a>
+                    <a href="/executive">Fotos de eventos sociales famosos que nos eligen</a>
                 </div>
             </li>
-            <li><a href="">Somos Shake it Up</a></li>
+            <li><a href="/executive">Somos Shake it Up</a></li>
             <li class="dropdown">
                 <a href="/index">Nuestros servicios <img class="icono" src="/images/svg/martini-glass-citrus-solid.svg" alt=""></a>
                 <div class="dropdown-content">
@@ -49,6 +72,16 @@
             <li><a href="/contacts">Trabajá con nosotros</a></li>
         </ol>
     </nav>  
+    <div class="container-pop-up" id="container-pop-up">
+        <div class="pop-up">
+            <h2>No estas conectado</h2>
+            <p>Debes iniciar sesión para poder acceder</p>
+            <div class="button-pop-up">
+                <button id="close">cerrar</button>
+                <button id="login">iniciar Sesión</button>
+            </div>
+        </div>
+    </div>
 </body>
     <footer>
         <div class="footer-flex-container">
@@ -77,5 +110,7 @@
             </div>
         </div>
     </footer>
+    
+
     
 </html>
