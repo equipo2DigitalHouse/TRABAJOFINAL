@@ -1,17 +1,47 @@
-/* Reset de estilos */
+ /* Reset de estilos */
 body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
 }
 
 /* Estilos generales */
+Estilos generales
+
 body {
-    background-image: url(/public/images/jpg/trago7.jpg);
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    background-image: url('/images/jpg/trago7.jpg');
     background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	color: rgb(255, 243, 70);
+    background-size: cover;
+    background-attachment: fixed;
+    color: rgb(10, 227, 243);
 }
+
+.text-center {
+    text-align: center;
+}
+
+/* Estilos para el carrusel */
+
+#carrouselCountainer {
+    margin-top: 20px;
+}
+
+.owl-carousel {
+    display: flex;
+    justify-content: center;
+}
+
+.owl-item {
+    margin: 0 10px;
+}
+
+.owl-prev,
+.owl-next {
+    font-size: 24px;
+}
+
+/* Agrega otros estilos según sea necesario */
+
 
 .container {
     max-width: 1200px;
@@ -103,44 +133,6 @@ header {
     border-bottom: rgba(255, 255, 255, 0.1) 1px solid;
 }
 
-/* Estilos específicos para el carrusel (sustituye con el nombre de tu carrusel) */
-#tragos .owl-carousel {
-    width: 100%;
-}
-
-#tragos .owl-item {
-    margin: 0 5px; /* Espaciado entre los elementos del carrusel */
-}
-
-#tragos .owl-item img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Estilos para las controles del carrusel (sustituye con el nombre de tu carrusel) */
-#tragos .owl-controls {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-}
-
-#tragos .owl-controls .owl-page {
-    display: inline-block;
-    margin: 0 5px;
-}
-
-#tragos .owl-controls .owl-page span {
-    background: #333; /* Color del indicador de la página */
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    display: block;
-}
-
-#tragos .owl-controls .owl-page.active span {
-    background: #fff; /* Color del indicador de la página activa */
-}
-
 
 /* Footer */
 #footer {
@@ -162,7 +154,7 @@ header {
 }
 
 /* Owl Carousel */
-.owl-carousel {
+/* .owl-carousel {
     display: flex;
     flex-wrap: nowrap;
     overflow: hidden;
@@ -170,12 +162,12 @@ header {
 
 .owl-item {
     width: 100%;
-}
+} */
 
-.owl-carousel img {
+/* .owl-carousel img {
     width: 100%;
     height: auto;
-}
+} */
 
 /* Formulario de contacto */
 #contacto {
