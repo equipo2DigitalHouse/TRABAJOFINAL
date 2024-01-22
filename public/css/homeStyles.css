@@ -113,6 +113,7 @@ header{
     padding: 20px 0; 
     text-align: center; 
     position: relative; 
+    width:100%;
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
@@ -647,8 +648,9 @@ button{
         position: relative;
     }
     .navBar{
-    padding: 0;
-     }
+        width: 100%;
+        padding: 0;
+    }
      .navBar a {
         padding: 14px 16px;
 
@@ -660,9 +662,9 @@ button{
         width: 100%; 
     }
     .navBar li {
+
         margin-right: 5px;
         font-style: black;
-    
     }
 
     .formularioContacto{
