@@ -22,29 +22,49 @@ const storage = multer.diskStorage({ //ojo con esto que va en otro lado
     }
 });
 
-const validations= [
-//     body('name').notEmpty().withMessage('Escribe tu nombre'),
-//     body('surname').notEmpty().withMessage('Escribe tu apellido'),
-//     body('Email').notEmpty().withMessage('Escribe tu Email').bail()
-//     .isEmail().withMessage('Debes escribir un formato de correo electrónico válido'),
-//     body('userName').notEmpty().withMessage('Escribe tu nombre de usuario'),
-//     body('avatar').notEmpty().withMessage('Selecciona tu foto de perfil'),
-//     body('password').notEmpty().withMessage('Escribe tu contraseña'),
-//     body('avatar').custom((value, { req }) => {
-//     let file = req.file;
-          
-    
-// if (!file) {
-//     throw new Error ('Tienes que cargar una imagen');
-// }
-// return true;
-// })
-]
-    
+const { body, validationResult } = require('express-validator');
+const allowedImageFormats = ['jpg', 'jpeg', 'png', 'gif'];
+
+const productValidations = [
+  // Nombre
+  body('name')
+    .notEmpty().withMessage('Escribe el nombre del producto')
+    .isLength({ min: 5 }).withMessage('El nombre debe tener al menos 5 caracteres'),
+
+  // Descripción
+  body('description')
+    .isLength({ min: 20 }).withMessage('La descripción debe tener al menos 20 caracteres'),
+
+  // Imagen
+  body('image')
+    .custom((value, { req }) => {
+      const file = req.file;
+
+      if (!file) {
+        throw new Error('Debes cargar una imagen');
+      }
+
+      const fileExtension = file.originalname.split('.').pop().toLowerCase();
+      if (!allowedImageFormats.includes(fileExtension)) {
+        throw new Error('Formato de imagen no válido. Utiliza JPG, JPEG, PNG o GIF');
+      }
+
+      return true;
+    }),
+];
+
+// Middleware para manejar los errores de validación
+const handleValidationErrors = (req, res, next) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+  next();
+};
 
 
-const uploadFile= multer ({ storage });
-const { body } = require ('express-validator')
+// const uploadFile= multer ({ storage });
+// const { body } = require ('express-validator')
 
 
 router.get("/", productsController.products);
@@ -56,4 +76,9 @@ router.get("/product/:id",adminCheck,getProductById);
 router.delete('/product/delete/:id', deleteProduct);
 
 router.put("/product/edit/:id",confirmModifyProduct);
+
+module.exports = {
+  productValidations,
+  handleValidationErrors
+};
 module.exports = router;
