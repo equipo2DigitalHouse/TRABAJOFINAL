@@ -9,5 +9,6 @@ router.use(session({
 
 router.get("/", homeController.home);
 router.get("/home_login_error",homeController.home_login_error)
+router.get("/logOut",homeController.logOut)
 
 module.exports = router;

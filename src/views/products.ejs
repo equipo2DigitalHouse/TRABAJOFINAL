@@ -4,22 +4,35 @@
     <link rel="stylesheet" href="../../public/css/Products.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/productsStyles.css">
+    <link rel="stylesheet" href="/css/productsStyles.css" >
+    <link rel="stylesheet" href="/css/header.css">
     <title>Products</title>
+    
 </head>
+<header>
+    <div>
+        <ul class="headerUl">
+            <a class="headerlink" href="/">Inicio</a>
+            <a class="headerlink" href="/executive">Quienes nos eligen</a>
+            <a class="headerlink" href="/index">Nuestros servicios</a>
+            <a class="headerlink" href="/contacts">Trabaja con nosotros</a>
+            <a class="headerlink" href="/products">Nuestros Productos</a>
+        </ul>
+    </div>
+</header>
 <body>
     <h2 class="allProducts">All Products</h2>
     <% for(let i=0; i < productos.length; i++){%>
         <div class="form">
             <h3 class="h3"><%= productos[i].product_name %></h3>
             <%if(productos[i].image.includes('http')){%>
-               <div class="testeo"> <img src="<%= productos[i].image %>" alt="img" width="150px" height="150px" class="loginBar"></div>
+               <div class="testeo"> <img src="<%= productos[i].image %>" class="imgSize" alt="img" class="loginBar"></div>
             <%}else{%>
-                <div class="testeo"><img src="/images/barimages/<%= productos[i].image %>" alt="img" width="300px" height="175px"></div>
+                <div class="testeo"><img src="/images/barimages/<%= productos[i].image %>" class="imgSize" alt="img" ></div>
             <%}%>
-            <p>Precio: <%= productos[i].price %></p>
-            <p>Descripcion: <%= productos[i].description %></p>
-            <p>Fecha hasta que estará disponible: <%= productos[i].date %> </p>
+            <p><b>Precio:</b> <%= productos[i].price %> USD</p>
+            <p><b>Descripcion:</b> <%= productos[i].description %></p>
+            <p><b>Fecha hasta que estará disponible:</b> <%= productos[i].date %> </p>
 
             <% if (req.session.usuarioLogeado !== undefined) { %>
                 <% if (req.session.usuarioLogeado.isAdmin == 1) { %>
