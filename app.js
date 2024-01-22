@@ -33,13 +33,14 @@ const loginRoutes = require("./src/routes/loginRoutes");
 const productsRoutes = require("./src/routes/productsRoutes");
 const registerRoutes = require("./src/routes/registerRoutes");
 const contactsRoutes = require("./src/routes/contactsRoutes");
+const tragosRoutes = require("./src/routes/tragos");
 const cookies = require("./src/routes/cookies");
 const users = require("./src/routes/usersRoutes");
 const shop = require("./src/routes/shopRoutes");
 const executive = require("./src/routes/executiveRoutes");
 const apiProducts = require("./src/routes/api/apiProducts");
 const apiusers = require("./src/routes/api/apiUsers");
-const apiPostulants = require('./src/routes/API/apiPostulants')
+const apiPostulants = require('./src/routes/API/apiPostulants');
 app.listen(PORT , () =>
 console.log(`Servidor escuchando en puerto ${PORT}`));
 
@@ -58,6 +59,7 @@ app.use(cookies);
 app.use(users);
 app.use(shop);
 app.use(executive)
+app.use(tragosRoutes);
 app.use('/api/products', apiProducts)
 app.use("/api/users", apiusers)
 app.use('/api/postulants',apiPostulants);
