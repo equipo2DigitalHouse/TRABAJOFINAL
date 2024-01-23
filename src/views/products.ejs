@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../../public/css/Products.css">
+    <link rel="stylesheet" href="/css/products.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/productsStyles.css" >
     <link rel="stylesheet" href="/css/header.css">
     <title>Products</title>
-    
-</head>
+    </head>
 <header>
     <div>
         <ul class="headerUl">
@@ -33,7 +32,7 @@
             <p><b>Precio:</b> <%= productos[i].price %> USD</p>
             <p><b>Descripcion:</b> <%= productos[i].description %></p>
             <p><b>Fecha hasta que estará disponible:</b> <%= productos[i].date %> </p>
-
+            
             <% if (req.session.usuarioLogeado !== undefined) { %>
                 <% if (req.session.usuarioLogeado.isAdmin == 1) { %>
                     <% console.log(req.session.usuarioLogeado) %>
@@ -47,5 +46,6 @@
             
         </div>
     <% } %>
+    
 </body>
 </html>
