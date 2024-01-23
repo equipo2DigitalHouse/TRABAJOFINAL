@@ -20,28 +20,24 @@ module.exports = {
               res.send(error);
               console.log(error);
         }
-    },
-    // detail: async (req,res) => {
-    //     try {
-    //         const {id} = req.params;
-    //         const productDetail = await Postulantes.findByPk(id, {
-    //             include: ['Category']
-    //         });   
-    //         if(productDetail){
-    //             let results = { 
-    //                 metadata:{
-    //                   status:200,
-    //                  },
-    //                  data:{ productDetail }
-    //             }
-            
-    //             res.json(results)
-    //         };
-            
-    //     } catch (error) {
-    //         res.send(error);
-    //         console.log(error); 
-    //     }
-    // },
-}
+    },    detail: async (req, res) => {
+        try {
+            const {id} = req.params
+            const postul = await Postulantes.findByPk(id);
+          
+            if (postul) {
+              let results = {
+                metadata: {
+                  status: 200,
+                },
+                data: { postul }
+              }
+              res.json(results)
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+};
+
 

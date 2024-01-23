@@ -40,9 +40,8 @@
         </div>      
 </div>
 <div class="title-img-container">
-    <h1>¿Querés saber qué dicen las celebridades de nosotros? Clickeá acá</h1>
+    <h1 class="TitleCelebs">¿Querés saber qué dicen las celebridades de nosotros? Clickeá...</h1>
     <img src="images/jpg/arrow.png" alt="">
-
 </div>
 <form class="famousOpinionForm">
     <label for="nombreFamoso">Selecciona un famoso:</label>
@@ -62,6 +61,14 @@
 </div>
 
 <script>
+    
+    window.addEventListener('load', function() {
+  let titulo = document.querySelector('.TitleCelebs')
+  titulo.addEventListener('mouseover',function(){
+    titulo.classList.add('titulo')
+
+  })
+});
     function mostrarMensaje() {
         var nombreFamosoSeleccionado = document.getElementById("nombreFamoso").value;
         var imagenFamoso = document.getElementById("imagenFamoso");

@@ -9,7 +9,11 @@ body{
     background-position: center; /* Centra la imagen en el fondo */
     background-repeat: no-repeat
 }
-
+.titulo {
+    padding: 12px;
+    text-transform: uppercase;
+    color: white;
+  }
 .navBar {
     background-color: #aa4e9f;
     box-shadow: 15px 13px 37px #a11791;
