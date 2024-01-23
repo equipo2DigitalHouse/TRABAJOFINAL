@@ -247,7 +247,14 @@ label{
     opacity: 0.8;
     background-color: #e0e0e0;
 }
-/* Define la animación */
+.title {
+    font-size: 2em; /* Tamaño de fuente */
+    font-weight: bold; /* Grosor de la fuente (negrita) */
+}
+.TitleCelebs{
+    font-size: 2em; /* Tamaño de fuente */
+    font-weight: bold;
+}
 @keyframes carrusel {
     0% {
         transform: translateX(0);
@@ -263,5 +270,26 @@ label{
     }
     100% {
         transform: translateX(0);
+    }}
+@media (max-width: 480px) {
+  
+    .divisorGeneral{
+        width:fit-content;
+        border: 1px solid pink;
     }
-}
+    .TextDivisor{
+        font-size: small;
+        
+    }
+    .title{
+        font-size: 1em; /* Tamaño de fuente */
+        font-weight: bold; /* Grosor de la fuente (negrita) */
+    }
+    
+  }
+
+  @media (min-resolution: 600dpi) {
+    body {
+      font-size: 18px;
+    }
+  }
