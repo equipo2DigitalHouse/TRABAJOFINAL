@@ -5,7 +5,7 @@
 - Martin (Diseñadora de interfaz)
 - Javier (Desarrollador principal)
 
-# Retrospectiva del Equipo - Sprint 4
+# Retrospectiva del Equipo - Sprint 1, 2, 3, 4, 5, 6, 7, 8.
 
 ## Resumen del Sprint 1
 
