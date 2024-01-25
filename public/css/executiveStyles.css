@@ -145,12 +145,14 @@ button {
     width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
     height: 100%; /* Ajusta la altura al 100% del contenedor para mantener la proporción original */
     object-fit: cover; /* Cubre el área completa del contenedor manteniendo la proporción */
-
+    border: none;
+    background-color: #a11791;
 }
 
 img {
     max-width: 100%;
     height: auto;
+    border: none;
 }
 .divisorGeneral {
     display: flex;
