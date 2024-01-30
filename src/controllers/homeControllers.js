@@ -7,6 +7,10 @@ const homeController = {
     },
     home_login_error: (req,res) => {
         res.render(path.join(__dirname,"../views/home_login_error"))
+    },
+    logOut: (req,res) => {
+        req.session.usuarioLogeado = undefined
+        res.redirect("/")
     }
 }
 

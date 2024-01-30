@@ -22,14 +22,14 @@
             </form>
         </div>
     <% }else{ %>
-    <div class="nameLoginHome">
+    <div class="nameLoginHome" style="margin-left: 18px;">
         <h2>Bienvenid@  <%= req.session.usuarioLogeado.name %> </h2>
-        <div class="LoginUser">     
+        <div class="LoginUser" style="width: 100%;">     
             <form class ="LoginUserSon" action="/login" method="GET">
-                <label for="Logueate">Regístrate para una mejor atención</label>
+                <!-- <label for="Logueate">Regístrate para una mejor atención</label> -->
                 <div class="DefaultUserPictureContainer">
                     <img class="DefaultUserPicture" src="<%= req.session.usuarioLogeado && req.session.usuarioLogeado.avatar ? '/images/avatars/' + req.session.usuarioLogeado.avatar : '/images/avatars/DefaultUser1.jpg' %>" alt="Imagen de perfil del usuario"></div>
-                <button type="button" onclick="window.location.href='/login'">Bienvenid@ <%= req.session.usuarioLogeado.name %>!</button>
+                <button type="button" onclick="window.location.href='/logOut'">Cerrar Sesión</button>
 
             </form>
             
@@ -42,12 +42,12 @@
                     <img id="logoShake" src="/images/jpg/ShakeBatido.jpeg" alt="">
         </div>
         <div class="logoCarrito" id="logoCarrito">
-            <a href="/shop">
+            <a href="/list">
                 <img src="/images/svg/carrito.svg" alt="">
             </a>
-            <div class="Carro">
-                <div id="textoCarrito">  Shake it Shop! </div>
-            </div>
+            <!-- <div class="Carro">
+                <div id="textoCarrito">  Shake it Shop! </div>  
+            </div> -->
         </div>
 </header>
 <body>
@@ -70,6 +70,7 @@
                     <a href="/index">Barra Gold</a>
             </li>
             <li><a href="/contacts">Trabajá con nosotros</a></li>
+            <li><a href="/products">Nuestros productos</a></li>
         </ol>
     </nav>  
     <div class="container-pop-up" id="container-pop-up">

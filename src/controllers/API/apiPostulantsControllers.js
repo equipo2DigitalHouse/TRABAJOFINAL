@@ -8,8 +8,8 @@ module.exports = {
             const postulantes = await Postulantes.findAll();
             if (postulantes.length >0) {
                 let results = { 
-                    metadata: {
-                        status:200,
+                    count: {
+                        // status:200,
                         quantity: postulantes.length
                     },
                     data: { postulantes }

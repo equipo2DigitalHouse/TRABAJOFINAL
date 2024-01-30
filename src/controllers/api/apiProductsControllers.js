@@ -8,8 +8,8 @@ module.exports = {
             const products = await Productos.findAll();
             if (products.length >0) {
                 let results = { 
-                    metadata: {
-                        status:200,
+                    count: {
+                        // status:200,
                         quantity: products.length
                     },
                     data: { products }
@@ -25,7 +25,7 @@ module.exports = {
         try {
             const {id} = req.params;
             const productDetail = await Product.findByPk(id, {
-                include: ['Category']
+                
             });   
             if(productDetail){
                 let results = { 

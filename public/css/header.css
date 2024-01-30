@@ -1,0 +1,32 @@
+.headerUl {
+    position: fixed;
+    top: 0;
+    background-color: #aa4e9f;
+    box-shadow: 15px 13px 37px #a11791;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+}
+
+.headerlink {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.headerlink:hover {
+    background-color: lightcyan;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 60px; 
+}
