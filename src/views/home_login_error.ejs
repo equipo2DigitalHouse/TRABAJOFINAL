@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/carrito.css"> -->
+    <link rel="stylesheet" href="css/home_login_error.css">
+    <title>Home</title>
+</head>
+<header>
+    
+    
+        <div id="contenedorLogoShake">
+                    <img id="logoShake" src="/images/jpg/ShakeBatido.jpeg" alt="">
+        </div>
+        <div class="logoCarrito" id="logoCarrito">
+            <a href="/list">
+                <img src="/images/svg/carrito.svg" alt="">
+            </a>
+            <div class="Carro">
+                <div id="textoCarrito">  Shake it Shop! </div>
+            </div>
+        </div>
+</header>
+<body>
+    <nav class="navBar">
+        <ol>
+            <li><a href="">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#">Quienes nos eligen <img class="icono" src="/images/svg/star-regular.svg" alt="" ></a>
+                <div class="dropdown-content">
+                    <a href="#">Fotos de eventos ejecutivos</a>
+                    <a href="#">Fotos de eventos sociales famosos que nos eligen</a>
+                </div>
+            </li>
+            <li><a href="">Somos Shake it Up</a></li>
+            <li class="dropdown">
+                <a href="/index">Nuestros servicios <img class="icono" src="/images/svg/martini-glass-citrus-solid.svg" alt=""></a>
+                <div class="dropdown-content">
+                    <a  href="/index">Barra Classic</a>
+                    <a href="/index">Barra Plata</a>
+                    <a href="/index">Barra Gold</a>
+            </li>
+            <li><a href="/contacts">Trabajá con nosotros</a></li>
+        </ol>
+    </nav>  
+    <div class="container-pop-up" id="container-pop-up">
+        <div class="pop-up">
+            <h2>No estas conectado</h2>
+            <p>Debes iniciar sesión para poder acceder</p>
+            <div class="button-pop-up">
+                <button id="close" onclick="window.location.href='/'">cerrar</button>
+                <button id="login" onclick="window.location.href ='/login'">iniciar Sesión</button>
+            </div>
+        </div>
+    </div>
+</body>
+    <footer>
+        <div class="footer-flex-container">
+            <div class="formularioContacto">
+                <div id="Contactanos">Contactate con nosotros</div>
+                <div class="textoContacto">
+                    <p>Via Whatsapp...</p> 
+                    <a href="https://wa.me/5491123456789">
+                        <p class="textoSmall">+5491123456789</p>
+                        <img class="iconoContacto" src="/images/svg/square-whatsapp.svg" alt="">
+                    </a>
+                    <textarea id="textarea" name="" placeholder="Consultas!"></textarea>
+                </div>
+                <div>
+                    <input class="checkButtom" type="submit" value="Enviar">
+                </div>
+            </div>
+            <div class="contenedorRedes">
+                <h4>Seguinos en nuestras redes!</h4>
+                <ol class="socialMedia">
+                    <li><a href="https://www.instagram.com/"><img class="icono" src="/images/svg/instagram.svg" alt=""> Instagram</a></li>
+                    <li><a href="https://www.facebook.com/"><img class="icono" src="/images/svg/facebook.svg" alt=""> Facebook</a></li>
+                    <li><a href="https://twitter.com/"><img class="icono" src="/images/svg/twitter.svg" alt=""> Twitter</a></li>
+                    <li><a href="correo@ejemplo.com"><img class="icono" src="/images/svg/SobreCarta.svg" alt=""> Email</a></li>
+                </ol>
+            </div>
+        </div>
+    </footer>
+    
+
+    
+</html>

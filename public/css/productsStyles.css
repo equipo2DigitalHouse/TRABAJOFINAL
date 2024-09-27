@@ -48,3 +48,7 @@ background-image: url(/images/jpg/wepik-export-202308260528110Mst.png);
  p{
     padding-top: 10px;
  }
+
+ .imgSize{
+   width: 75%;
+ }

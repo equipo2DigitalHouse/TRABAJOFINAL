@@ -1,0 +1,82 @@
+body {
+    background-image: url(/images/jpg/wepik-export-202308260528110Mst.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    .center-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 600px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #958dc7; /* Añadido un color de fondo */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añadida una sombra */
+    }
+    
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .formEditProduct {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    label {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    
+    input,
+    textarea,
+    button {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%;
+    }
+    
+    button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    .img-grande {
+        width: 200%; /* Esto hará que la imagen sea el doble de ancha */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+}    

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/newStyles.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <title>Detalle de producto</title>
+    
+</head>
+<header>
+    <%- include ('parcial/header')%>
+</header>
+<body>
+    <div class="center-container">
+    <div class="container">
+    <h1>Editar producto</h1>
+    <form action="/product/edit/<%= product.id %>?_method=PUT" method="POST">
+        <div>
+            <label for="">Titulo</label>
+            <input type="text" name="product_name" id="" value="<%= product.product_name %>">
+        </div>
+        <div>
+        <label for="productName">Nombre:</label>
+    <input type="text" id="productName" required minlength="5">
+        </div>
+        <div>
+            <label for="">Precio</label>
+            <input type="text" name="price" id="" value="<%= product.price %>">
+        </div>
+        <div>
+            <label for="productDescription">Descripción:</label>
+            <textarea id="productDescription" required minlength="20"></textarea>
+        </div>
+        <div>
+            <label for="productImage">Imagen:</label>
+    <input type="file" id="productImage" accept="image/jpeg, image/png, image/gif">
+        </div>
+        <button type="submit">Guardar Producto</button>
+    </form>
+</body>
+</html>

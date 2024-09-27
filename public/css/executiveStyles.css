@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(/images/jpg/pexels-jovydas-pinkevicius-3358953.jpg);
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-repeat: no-repeat
+}
+
+.navBar {
+    background-color: #aa4e9f;
+    box-shadow: 15px 13px 37px #a11791;
+    border-radius: 24px;
+    padding: 20px 0; 
+    text-align: center; 
+    position: relative; 
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:medium;
+    
+}
+
+.navBar ol {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; 
+    position: relative; /* Cambiar a relative para que los elementos internos usen este como referencia */
+    font-style: black;
+
+}
+
+.navBar li {
+    margin-right: 15px;
+    font-style: black;
+
+}
+
+.navBar a {
+    text-decoration: none;
+    color: white;
+    padding: 14px 16px;
+    display: block;
+    font-style: black;
+    font-size: medium;
+
+}
+
+.navBar .dropdown {
+    position: relative;
+    font-style: black;
+}
+.desplegables{
+    font-style: black;
+}
+
+.navBar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 7px 13px 37px #a11791;
+    z-index: 1;
+    font-style: black;
+    color: black;
+}
+
+.navBar .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    font-style: black;
+
+}
+
+.navBar .dropdown:hover .dropdown-content {
+    display: block;
+    font-style: black;
+
+}
+.icono{
+    height: 15px;
+    width: 15px;
+    position: relative;
+    
+}
+.imgContainer {
+    margin: 1px solid black; /* Ajusta las unidades y el estilo del borde */
+}
+
+.imgContainer img {
+    width: 100%; /* Ancho deseado */
+    height:100% ; /* Alto deseado */
+}
+
+.search-bar {
+    width: 200px; /* Puedes ajustar el ancho según tus necesidades */
+    margin: 10px; /* Puedes ajustar el margen según tus necesidades */
+    display: flex;
+    height: 40px;
+}
+
+input[type="search"] {
+    width: 80%; /* Ajusta el ancho del campo de búsqueda según tus necesidades */
+    padding: 5px; /* Ajusta el relleno según tus necesidades */
+    height: 40px;
+}
+
+button {
+    padding: 3.5px 7px;
+}
+.title{
+    color:  #a11791;;
+    text-align: center;
+    background-color: violet;
+}
+.Container1 {
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid pink;
+}
+.contenedorCarrousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color:antiquewhite
+}
+
+.contenedorCarrousel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    animation: carrusel 20s linear infinite; /* Controla la velocidad de la animación */
+}
+
+.slide {
+    flex: 0 0 calc(100% - 10px); /* Ancho fijo para cada imagen con un margen de 10px */
+    margin-right: 10px; /* Margen entre las imágenes */
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: 100%; /* Ajusta la altura al 100% del contenedor para mantener la proporción original */
+    object-fit: cover; /* Cubre el área completa del contenedor manteniendo la proporción */
+    border: none;
+    background-color: #a11791;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+}
+.divisorGeneral {
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid pink;
+    background-color: blueviolet;
+    
+}
+.TextDivisor {
+    margin: 0 20px; /* Ajusta el valor del margen según tus necesidades */
+    color: white;
+    font-size: large;
+    
+    
+}
+h2 {
+    margin-bottom: 10px; /* Puedes ajustar el margen inferior del encabezado según tus preferencias */
+    color: goldenrod;
+    font-style: italic;
+    text-decoration: underline;
+}
+h1 { 
+    color: #f9f9f9;
+}
+.title-img-container{
+    display: flex;
+    text-align: center;
+    background-color: violet;
+}
+.title-img-container img{ 
+    max-width: 10%;
+    height: auto;
+}
+.linkQuestion{
+    background-color: #f1f1f1;
+}
+#mensajeContainer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ccc;
+    opacity: 0.9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: black;
+    display: flex; /* Utiliza flex en lugar de inline-table */
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+label{
+    color:antiquewhite
+}
+#nombreFamoso {
+    color: blue; /* Cambia el color del texto del select */
+    background-color: #f0f0f0; /* Cambia el color de fondo del select */
+    border: 1px solid #ccc; /* Agrega un borde al select */
+    padding: 5px; /* Añade un espacio interno alrededor del contenido del select */
+
+}
+.famousOpinionForm label{
+    color: black;
+    font-size: larger;
+}
+
+#nombreFamoso option {
+    color: blue; /* Cambia el color del texto de las opciones */
+    background-color: #e0e0e0; /* Cambia el color de fondo de las opciones */
+    font-size: x-large;
+}
+#imagenFamoso {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+#mensajeFamoso {
+    border-radius: 10px; /* Aplica un borde redondeado para el mensaje */
+    background-color: #eaeaea; /* Cambia el color de fondo del mensaje */
+    padding: 20px; /* Ajusta el espacio interno del mensaje según tus preferencias */
+    max-width: 400px; /* Ajusta el ancho máximo del mensaje según tus preferencias */
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: inline-block; /* Alinea el mensaje como un bloque en línea */
+}
+.famousOpinionForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: larger;
+    opacity: 0.8;
+    background-color: #e0e0e0;
+}
+/* Define la animación */
+@keyframes carrusel {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

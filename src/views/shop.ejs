@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/header.css">
+    <title>Shake it Shop!</title>
+</head>
+<header>
+    <%- include ('parcial/header')%>
+    <h1> Calculá el valor de tu evento?</h1>
+    <h4>(los valores son aproximados, buscamos ofrecerte un valor aproximado para más atención comunicate con nosotros)</h4>
+
+</header>
+<script>
+    let select = prompt("Hola! ¿Necesitas consejos para planificar tu fiesta? Un asesor se puede comunicar contigo...");
+
+    while (select !== "si" && select !== "no") {
+        alert("Por favor, ingresa si o no desde el teclado");
+        select = prompt("Para continuar contestá si o no");
+    }
+
+    if (select === "si") {
+        window.location.href = "https://api.whatsapp.com/send?phone=123456789";
+    } else {
+        
+    }
+</script>
+<a href="https://api.whatsapp.com/send?phone=123456789" target="_blank">HACE CLICK ACÁ</a>
+
+
+</body>
+</html>

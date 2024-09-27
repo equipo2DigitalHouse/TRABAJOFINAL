@@ -1,8 +1,10 @@
 <!doctype html>
 <html lang="es">
+	
     <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">    
 		<link rel="stylesheet" href="indexStyles.css">
+		<link rel="stylesheet" href="/css/header.css">
 		
         <title>Barra Móvil de Tragos en donde estes</title>
         <meta name="description" content="Necesitas una barra de tragos para tu evento? No busques más, te ofrecemos el mejor servicio de barra móvil a domicilio, a partir de $35500"/>
@@ -17,7 +19,10 @@
         <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />	
 		
 		</head>
-		<body style="background-image: url(/images/jpg/wepik-export-20230826052311ARGp.png);
+		<header>
+			<%- include ('parcial/header')%>
+		</header>
+		<body style="background-image: url(/images/jpg/trago7.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-attachment: fixed;
@@ -37,16 +42,16 @@
 
 				
 		    
-    <nav class="navBar">
+    <!-- <nav class="navBar">
         <ol>
-        <li><a href="">Inicio</a></li>
-        <li><a href="">Quienes nos eligen</a><img  class="icono"  alt="" ></li>
-        <li><a href="">Somos Shake it Up</a></li>
-        <li><a href="/contacts">Trabajá con nosotros</Table></a></li>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="executive">Quienes nos eligen</a><img  class="icono"  alt="" ></li>
+		<li><a href="/contacts">Trabajá con nosotros</Table></a></li>
+		<li><a href="/tragos">"Nuestras marcas"</a></li>
         </ol>
-    </nav>
+    </nav> -->
 		        <div class="align-bottom relative-xs text-center">
-		            <a class="btn btn-filled btn-lg mb32 mt-xs-40 inner-link" href="#precios" target="_self">VER PRECIOS</a>
+		            <a class="btn btn-filled btn-lg mb32 mt-xs-40 inner-link" href="/products" target="_self">VER PRECIOS</a>
 		        </div>
 		    </section><a id="contacto" class="in-page-link"></a>
 			
@@ -71,7 +76,7 @@
 									<h5 class="uppercase">BARRA CLASICA</h5>								
 									<span class="price">$50000 / 3hs</span>
 									<p class="lead">¡Más de 30 tragos!</p>
-									<a class="btn btn-white btn-lg btn-filled inner-link" href="#contacto" target="_self">LA QUIERO</a>
+									<a class="btn btn-white btn-lg btn-filled inner-link" href="products" target="_self">LA QUIERO</a>
 									<ul>
 									<div>Servicio de 3 hs.</div>
 									<div>BEBIDAS</div>
@@ -90,7 +95,7 @@
 									<div>
 										<br>
 									</div>
-										<div style="background-color: rgba(0, 0, 0, 0.737);
+										<div style="background-color: rgba(0, 0, 0, 0.904);
 										border-radius: 15px;">Americano, Aperol Spritz, Atomic Green, Apple Gancia, Bellini, Blind melón, Blue Fizz,
 	Boulevarier, Caipirinha, Caipirinha de frutilla, Caipiríssima, Caipirovska,
 	Campari orange, Campari tonic, Mimosa, Cielito lindo, Cuba Libre, Daiquiri
@@ -114,7 +119,7 @@
 							    <h5 class="uppercase">BARRA PLATA</h5>
 		                        <span class="price">$75000 / 4 hs</span>
 		                        <p class="lead">¡La mejor bebida!</p>
-								<a class="btn btn-white btn-lg btn-filled inner-link" href="#contacto" target="_self">LA QUIERO</a>
+								<a class="btn btn-white btn-lg btn-filled inner-link" href="products" target="_self">LA QUIERO</a>
 		                        <ul>
 		                            <div>Servicio de 4 hs.</div>
 										<div>BEBIDAS</div>
@@ -132,8 +137,10 @@
 		                            <div>--TRAGOS--</div>
 									<div>
 										<br>
+										<br>
 									</div>
-									<div>Americano, Aperol Spritz, Atomic Green, Apple Gancia, Bellini, Blind melón, Blue Fizz,
+									<div style="background-color: rgba(0, 0, 0, 0.788);
+										border-radius: 15px;">Americano, Aperol Spritz, Atomic Green, Apple Gancia, Bellini, Blind melón, Blue Fizz,
 Boulevarier, Caipirinha, Caipirinha de frutilla, Caipiríssima, Caipirovska,
 Campari orange, Campari tonic, Mimosa, Cielito lindo, Cuba Libre, Daiquiri
 (Frutilla-Durazno), Vodka Orange, Electric lemonade, Fernet con coca,
@@ -156,7 +163,7 @@ tonic</div>
 		                        <h5 class="uppercase">BARRA GOLD</h5>
 		                        <span class="price">$125000 / 4 hs</span>
 		                        <p class="lead">¡Para exigentes!</p>
-		                        <a class="btn btn-white btn-lg btn-filled inner-link" href="#contacto" target="_self">LA QUIERO</a>
+		                        <a class="btn btn-white btn-lg btn-filled inner-link" href="products" target="_self">LA QUIERO</a>
 		                        <ul>
 		                            <div>Servicio de 4 hs.</div>
 		                            <div>BEBIDAS IMPORTADAS</div>
@@ -174,7 +181,8 @@ tonic</div>
 									<div>
 										<br>
 									</div>
-									<div> Aperol Spritz, Atomic Green, Apple Gancia, Bellini, Blind melón, Blue Fizz,
+									<div style="background-color: rgba(0, 0, 0, 0.603);
+										border-radius: 15px;"> Aperol Spritz, Atomic Green, Apple Gancia, Bellini, Blind melón, Blue Fizz,
 Boulevarier, Caipirinha, Caipirinha de frutilla, Caipiríssima, Caipirovska,
 Campari orange, Campari tonic, Mimosa, Cielito lindo, Cuba Libre, Daiquiri
 (Frutilla-Durazno), Vodka Orange, Electric lemonade, Fernet con coca,
@@ -277,11 +285,11 @@ tonic</div>
 						</div>
 						<div class="col-md-5 col-sm-6">
 							<p class="lead">Estamos listos para llevar tu barra!</p>
-							<h4 class="mb8">Móvil: <a href="tel:+5491131137755">11 3113-7755</a>
-		<br>Whatsapp: <a href="https://wa.me/5491131137755">11 3113-7755</a>
-		<br>Email: <a href="mailto:promociones@shakeitup.com.ar">promociones@shakeitup.com.ar</a>
+							<h4 class="mb8">Móvil: <a style="color: black;" >11 3113-7755</a>
+		<br>Whatsapp: <a style="color: black;" href="https://wa.me/5491131137755">11 3113-7755</a>
+		<br>Email: <a style="color: black;" href="mailto:promociones@shakeitup.com.ar">promociones@shakeitup.com.ar</a>
 		<br></h4>									
-							<h4 class="mb0">IG: <a href="https://www.instagram.com/shake_up/" rel="noopener,noreferrer,nofollow">@shake_itup</a></h4>
+							<h4 class="mb0">IG: <a style="color: black;" href="https://www.instagram.com/shakeitup_oficial/" rel="noopener,noreferrer,nofollow">@shake_itup</a></h4>
 						</div>
 					</div>
 					<div class="row">

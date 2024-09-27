@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header.css">
+    <title>Document</title>
+</head>
+<header>
+    <%- include ('parcial/header')%>
+</header>
+<body>
+    <h2>Usuarios</h2>
+    <% for(let i=0; i < usuarios.length; i++){%>
+<li>
+    <ul> ID:    <%= usuarios[i].id %></ul>
+    <ul> NOMBRE:   <%= usuarios[i].name %> </ul>
+    <ul> APELLIDO:   <%= usuarios[i].last_name %></ul>
+    <ul> EMAIL:   <%= usuarios[i].email %></ul>
+    <ul> NOMBRE DE USUARIO:   <%= usuarios[i].user_name %></ul>
+    <ul> CONTRASEÑA:   <%= usuarios[i].password %></ul>
+    <ul> ES ADMIN?:   <%= usuarios[i].isAdmin %></ul>
+
+    
+    
+    
+    </li>
+    <% } %>
+</body>
+</html>

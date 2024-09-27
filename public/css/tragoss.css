@@ -1,0 +1,210 @@
+ /* Reset de estilos */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales */
+Estilos generales
+
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    background-image: url('/images/jpg/trago7.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: rgb(10, 227, 243);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Estilos para el carrusel */
+
+#carrouselCountainer {
+    margin-top: 20px;
+}
+
+.owl-carousel {
+    display: flex;
+    justify-content: center;
+}
+
+.owl-item {
+    margin: 0 10px;
+}
+
+.owl-prev,
+.owl-next {
+    font-size: 24px;
+}
+
+/* Agrega otros estilos según sea necesario */
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #ffec47;
+}
+
+/* Barra de navegación */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* Sección de servicios */
+#servicios {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+#servicios h2 {
+    color: #ffec47;
+}
+
+#servicios p {
+    font-size: 18px;
+}
+
+/* Sección de tragos */
+/* #tragos {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 50px 0;
+}
+
+#tragos h2 {
+    color: #ffec47;
+}
+
+#tragos .toggle-content {
+    display: none;
+}
+
+#tragos .toggle.active .toggle-content {
+    display: block;
+} */
+
+/* Estilos generales para el contenedor del carrusel */
+#tragos {
+    color: #666;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    position: relative;
+    padding: 80px 0;
+    transition: all 0.4s;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    box-sizing: border-box !important;
+    background-color: #212121;
+    border-bottom: rgba(255, 255, 255, 0.1) 1px solid;
+}
+
+
+/* Footer */
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+#footer a {
+    color: #ffec47;
+}
+
+/* Redes sociales */
+#footer .social-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #ffec47;
+}
+
+/* Owl Carousel */
+/* .owl-carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.owl-item {
+    width: 100%;
+} */
+
+/* .owl-carousel img {
+    width: 100%;
+    height: auto;
+} */
+
+/* Formulario de contacto */
+#contacto {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 50px 0;
+}
+
+#contacto h2 {
+    color: #ffec47;
+}
+
+#contacto form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contacto input,
+#contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+}
+
+#contacto button {
+    background-color: #ffec47;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Mapa (si decides incluirlo) */
+#mapa {
+    height: 400px;
+}

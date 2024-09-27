@@ -4,14 +4,11 @@
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-gap: 50px; .resolucion {
-    width: 1300%;
+    grid-gap: 50px; .resolucion{
+    width: 1300%;}
     text-align: center;
-    
-    
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+    
 
 
 *{
@@ -20,15 +17,8 @@
     box-sizing: border-box;
     font-family: 'Open Sans',sans-serif;
     color: white;
-    
+    text-decoration-color: white;
 }
-
-    margin-top: 90px;
-    
-    
-    }
-    
-
 
 body{
     height: 700px;
@@ -40,18 +30,20 @@ body{
 }
 
 .container-form h2{
-    color: white;
+    text-decoration-color: white;
     margin-bottom: 15px;
     font-size: 35px
     
     
 }
+
 .container-form p{
     font-size: 17px;
     line-height: 1.6;
     margin-bottom: 30px;
     color: white;
 }
+
 .container-form a{
     font-size: 20px;
     display: inline-block;
@@ -66,6 +58,7 @@ body{
     color: white;
     margin-right: 10px;
 }
+
 .container-form form .campo, textarea{
     width: 94%;
     padding: 15px 10px;
@@ -75,6 +68,7 @@ body{
     border-radius: 3px;
     outline: 0px;
 }
+
 .container-form form textarea{
     max-width: 300px;
     min-width: 300px;
@@ -95,6 +89,3 @@ body{
 .container-form .btn-enviar:hover{
     background: #e4a9bf;
 }
-
-
-

@@ -1,6 +1,6 @@
 *{
-    margin: 10px;
-    padding: 10px;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -9,33 +9,32 @@ body{
 } 
 
 .listCompras{
-    width: 350px;
+    width: 350px; /*usar porcentajes/ww/hw*/
     height: 550px;
     background-color: #663399;
-    margin: 100px auto 0;
+    /* margin: 100px auto 0; */
     box-shadow: 7px 13px 37px #a11791;
     border-radius: 24px;
     padding: 20px 30px;
     text-align: center;
     position: fixed;
     right: 50px;
-    top: -25px;
+    top: 125px;
 }
 
 .listCompras h2{
-    margin: 0;
     text-align: center;
-    padding-bottom: 10px; /* Adjust padding for space between heading and border */
+    padding: 10px; /* Adjust padding for space between heading and border */
     border-bottom: 3px solid rgb(0, 0, 0);
-    margin-bottom: 3px;
+    margin: 10px;
 }
 
 .listCompras h3{
     text-align: justify;
-    font-size:small;
+    font-size: 18px;
     position: absolute;
-    top: -5px;
-    left: -25px;
+    top: 10px;
+    left: 15px;
 }
 
 .listCompras h3:hover{
@@ -50,9 +49,8 @@ body{
     border: none;
     color: rgb(0, 0, 0);
     text-align: center;
-    font-size: small;
+    font-size: 18px;
     position: relative;
-    left: -3%;
     bottom: -80%;
 
 }
@@ -73,7 +71,45 @@ body{
     text-shadow: 0px 0px 90px rgb(255, 255, 255); /* Configura la sombra para dar brillo */
 }
 
+     /* @keyframes shine {
+            0% {
+      background-position: -200%;
+    }
+    100% {
+      background-position: 200%;
+    }
+  } */
+  a:-webkit-any-link {
+    color: #000;
+    cursor:pointer;
+    text-decoration: none;
+}
+  .listCompras h3{
+    border-top: 100%;
+    padding: 10px 20px;
+    background-size: 0;
+    /* text-decoration: underline #ed36aa93; */
+    font-weight: bold;
+    animation: infinite;
+  } 
 
+  input[type="submit" i] {
+    appearance:initial;
+    user-select: none;
+    align-items: flex-start;
+    text-align: center;
+    cursor:pointer;
+    box-sizing: border-box;
+    background-color: #ed36aa65;
+    color: buttontext;
+    padding-block: 1px;
+    padding-inline: 6px;
+    padding-left: 3px;
+    border-width: 2px;
+    border-style:hidden ;
+    border-color: none;
+    border-image:none;
+  }
 
 
 
